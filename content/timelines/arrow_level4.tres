@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ArrowTimeline" format=3 uid="uid://cwftoumlp0nbd"]
+
+[ext_resource type="Script" uid="uid://cmdhhiu7aw3ny" path="res://scripts/arrow/arrow_sequence.gd" id="1_xdesb"]
+[ext_resource type="PackedScene" uid="uid://bax2g7hqv7ce4" path="res://content/arrows/arrow_fire.tscn" id="2_jcens"]
+[ext_resource type="Script" uid="uid://ysy7kt8civ23" path="res://scripts/arrow/arrow_timeline.gd" id="3_ccgbh"]
+
+[sub_resource type="Resource" id="Resource_o5ciw"]
+script = ExtResource("1_xdesb")
+min_survival_time = 5
+max_survival_time = 20
+scene = ExtResource("2_jcens")
+
+[resource]
+script = ExtResource("3_ccgbh")
+start_time = 100.0
+registry = Array[ExtResource("1_xdesb")]([SubResource("Resource_o5ciw")])

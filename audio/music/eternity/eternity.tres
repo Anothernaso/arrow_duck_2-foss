@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="MusicRegistry" format=3 uid="uid://byhm6xjsp2n7n"]
+
+[ext_resource type="AudioStream" uid="uid://brt0klpxbyywu" path="res://audio/music/eternity/DavidKBD - Eternity Pack - 01 - The desolation of a civilization - oneshoot.ogg" id="1_ul6y3"]
+[ext_resource type="AudioStream" uid="uid://cnqocw436rtao" path="res://audio/music/eternity/DavidKBD - Eternity Pack - 02 - Agony Space-deep - oneshoot.ogg" id="2_t8s6q"]
+[ext_resource type="AudioStream" uid="uid://cwsj3v0a376hg" path="res://audio/music/eternity/DavidKBD - Eternity Pack - 03 - I Can See You - oneshoot.ogg" id="3_5fgss"]
+[ext_resource type="AudioStream" uid="uid://dt3dxofy82jk7" path="res://audio/music/eternity/DavidKBD - Eternity Pack - 04 - Eating offal - oneshoot.ogg" id="4_ymjbx"]
+[ext_resource type="AudioStream" uid="uid://caxhgafmc3hph" path="res://audio/music/eternity/DavidKBD - Eternity Pack - 05 - Evil soul inside - oneshoot.ogg" id="5_oimdp"]
+[ext_resource type="AudioStream" uid="uid://bi7qun0sy8mgb" path="res://audio/music/eternity/DavidKBD - Eternity Pack - 06 - God of darkness - oneshoot.ogg" id="6_lh4kp"]
+[ext_resource type="AudioStream" uid="uid://7jhj8fpvalab" path="res://audio/music/eternity/DavidKBD - Eternity Pack - 07 - Suffocation - oneshoot.ogg" id="7_22pto"]
+[ext_resource type="AudioStream" uid="uid://tcd8ku0wc1f2" path="res://audio/music/eternity/DavidKBD - Eternity Pack - 08 - While We Sleep - oneshoot.ogg" id="8_d37u3"]
+[ext_resource type="Script" uid="uid://cs03dqqwe63jw" path="res://scripts/music_registry.gd" id="9_vhm38"]
+
+[resource]
+script = ExtResource("9_vhm38")
+music_streams = Array[AudioStream]([ExtResource("1_ul6y3"), ExtResource("2_t8s6q"), ExtResource("3_5fgss"), ExtResource("4_ymjbx"), ExtResource("5_oimdp"), ExtResource("6_lh4kp"), ExtResource("7_22pto"), ExtResource("8_d37u3")])

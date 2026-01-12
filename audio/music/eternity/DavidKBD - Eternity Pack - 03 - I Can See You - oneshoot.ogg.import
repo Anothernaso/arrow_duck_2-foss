@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cwsj3v0a376hg"
+path="res://.godot/imported/DavidKBD - Eternity Pack - 03 - I Can See You - oneshoot.ogg-21d1d617f9242d9f2044b1a713ec7e24.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/music/eternity/DavidKBD - Eternity Pack - 03 - I Can See You - oneshoot.ogg"
+dest_files=["res://.godot/imported/DavidKBD - Eternity Pack - 03 - I Can See You - oneshoot.ogg-21d1d617f9242d9f2044b1a713ec7e24.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

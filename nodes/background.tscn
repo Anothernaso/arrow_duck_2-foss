@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://bg8ahamfcwj3i"]
+
+[ext_resource type="Shader" uid="uid://bw0vbdk0n0wpg" path="res://shaders/background/background.gdshader" id="1_a6au1"]
+[ext_resource type="Texture2D" uid="uid://b62bov8q3n7pm" path="res://textures/mountains/sky.png" id="2_v20sc"]
+[ext_resource type="Texture2D" uid="uid://cx2gu1gmcdrn1" path="res://textures/mountains/clouds_bg.png" id="3_v20sc"]
+[ext_resource type="Texture2D" uid="uid://igwlmgv76hpq" path="res://textures/mountains/glacial_mountains.png" id="4_v20sc"]
+[ext_resource type="Texture2D" uid="uid://baas0opws06xe" path="res://textures/mountains/clouds_mg_3.png" id="5_v20sc"]
+[ext_resource type="Texture2D" uid="uid://btpjycbv6ofq1" path="res://textures/mountains/clouds_mg_2.png" id="6_chnqs"]
+[ext_resource type="Texture2D" uid="uid://cs2035maf4vfa" path="res://textures/mountains/clouds_mg_1.png" id="7_idd23"]
+[ext_resource type="Texture2D" uid="uid://brfmw1n8f33iu" path="res://textures/mountains/cloud_lonely.png" id="8_o0frb"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3n47u"]
+shader = ExtResource("1_a6au1")
+shader_parameter/speed = 5.0000002375
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_h7xmx"]
+shader = ExtResource("1_a6au1")
+shader_parameter/speed = 8.00000038
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qgm0n"]
+shader = ExtResource("1_a6au1")
+shader_parameter/speed = 10.000000475
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_chnqs"]
+shader = ExtResource("1_a6au1")
+shader_parameter/speed = 13.0000006175
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_82vyg"]
+shader = ExtResource("1_a6au1")
+shader_parameter/speed = 15.0000007125
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_o0frb"]
+shader = ExtResource("1_a6au1")
+shader_parameter/speed = 16.50000078375
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_42jju"]
+shader = ExtResource("1_a6au1")
+shader_parameter/speed = 11.50000054625
+
+[node name="Background" type="Node2D" unique_id=1040205565]
+scale = Vector2(3, 3)
+
+[node name="Background1" type="Sprite2D" parent="." unique_id=1293438526]
+material = SubResource("ShaderMaterial_3n47u")
+texture = ExtResource("2_v20sc")
+
+[node name="Background2" type="Sprite2D" parent="." unique_id=266661447]
+material = SubResource("ShaderMaterial_h7xmx")
+texture = ExtResource("3_v20sc")
+
+[node name="Background3" type="Sprite2D" parent="." unique_id=2095611402]
+material = SubResource("ShaderMaterial_qgm0n")
+texture = ExtResource("4_v20sc")
+
+[node name="Background4" type="Sprite2D" parent="." unique_id=1099606168]
+material = SubResource("ShaderMaterial_chnqs")
+texture = ExtResource("5_v20sc")
+
+[node name="Background5" type="Sprite2D" parent="." unique_id=1967665843]
+material = SubResource("ShaderMaterial_82vyg")
+texture = ExtResource("6_chnqs")
+
+[node name="Background6" type="Sprite2D" parent="." unique_id=1913443702]
+material = SubResource("ShaderMaterial_o0frb")
+texture = ExtResource("7_idd23")
+
+[node name="Background7" type="Sprite2D" parent="." unique_id=150475992]
+material = SubResource("ShaderMaterial_42jju")
+texture = ExtResource("8_o0frb")

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://tcd8ku0wc1f2"
+path="res://.godot/imported/DavidKBD - Eternity Pack - 08 - While We Sleep - oneshoot.ogg-000956b46ef358e5b89ff6743c13594c.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/music/eternity/DavidKBD - Eternity Pack - 08 - While We Sleep - oneshoot.ogg"
+dest_files=["res://.godot/imported/DavidKBD - Eternity Pack - 08 - While We Sleep - oneshoot.ogg-000956b46ef358e5b89ff6743c13594c.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

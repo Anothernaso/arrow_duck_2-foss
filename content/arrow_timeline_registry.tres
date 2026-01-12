@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ArrowTimelineRegistry" format=3 uid="uid://dute5ilp142a5"]
+
+[ext_resource type="Script" uid="uid://5d0v605nsdoa" path="res://scripts/arrow/arrow_timeline_registry.gd" id="1_w6cp1"]
+[ext_resource type="Script" uid="uid://ysy7kt8civ23" path="res://scripts/arrow/arrow_timeline.gd" id="2_xuq2u"]
+[ext_resource type="Resource" uid="uid://xt4030hbk534" path="res://content/timelines/arrow_level_intro.tres" id="3_7msnu"]
+[ext_resource type="Resource" uid="uid://lfakvi3u4xmp" path="res://content/timelines/arrow_level2.tres" id="5_gywcg"]
+[ext_resource type="Resource" uid="uid://cqmeq84mtrtba" path="res://content/timelines/arrow_level3.tres" id="5_uigu8"]
+[ext_resource type="Resource" uid="uid://cwftoumlp0nbd" path="res://content/timelines/arrow_level4.tres" id="6_82jl6"]
+
+[resource]
+script = ExtResource("1_w6cp1")
+timelines = Array[ExtResource("2_xuq2u")]([ExtResource("3_7msnu"), ExtResource("5_gywcg"), ExtResource("5_uigu8"), ExtResource("6_82jl6")])

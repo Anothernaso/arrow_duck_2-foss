@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://tjmbbdbl0gld"]
+
+[ext_resource type="Script" uid="uid://cuelktscthrbf" path="res://nodes/music/music.gd" id="1_rvjs3"]
+[ext_resource type="AudioStream" uid="uid://brt0klpxbyywu" path="res://audio/music/eternity/DavidKBD - Eternity Pack - 01 - The desolation of a civilization - oneshoot.ogg" id="2_bgpgu"]
+
+[node name="Music" type="Node" unique_id=708879094]
+script = ExtResource("1_rvjs3")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=839664584]
+stream = ExtResource("2_bgpgu")
+volume_db = -10.0
+playback_type = 1
+
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]

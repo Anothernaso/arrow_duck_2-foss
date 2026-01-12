@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://mywnkf0af500"]
+
+[ext_resource type="Script" uid="uid://c7j60e7uncupm" path="res://scripts/arrow/arrow_base.gd" id="1_kp2lp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8xdyk"]
+
+[sub_resource type="Gradient" id="Gradient_ckg5a"]
+offsets = PackedFloat32Array(0.394667, 0.408, 1)
+colors = PackedColorArray(0, 0, 0, 0, 0.385493, 0.385492, 0.385492, 1, 1, 1, 1, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_yrisp"]
+noise_type = 2
+frequency = 0.069
+fractal_octaves = 10
+fractal_lacunarity = -5.41
+fractal_gain = -0.45
+cellular_distance_function = 1
+cellular_jitter = 1.41
+cellular_return_type = 6
+domain_warp_enabled = true
+domain_warp_type = 1
+domain_warp_amplitude = 16.77
+domain_warp_frequency = 0.035
+domain_warp_fractal_octaves = 1
+domain_warp_fractal_lacunarity = 0.0
+domain_warp_fractal_gain = 4.645
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_6nrt8"]
+width = 20
+height = 20
+noise = SubResource("FastNoiseLite_yrisp")
+color_ramp = SubResource("Gradient_ckg5a")
+bump_strength = 32.0
+
+[node name="Arrow1" type="CharacterBody2D" unique_id=522784732]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("1_kp2lp")
+shape = SubResource("RectangleShape2D_8xdyk")
+texture = SubResource("NoiseTexture2D_6nrt8")

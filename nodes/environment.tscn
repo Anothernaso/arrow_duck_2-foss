@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://tktlpcpk1j2k"]
+
+[ext_resource type="PackedScene" uid="uid://bg8ahamfcwj3i" path="res://nodes/background.tscn" id="1_qrg0e"]
+[ext_resource type="PackedScene" uid="uid://pgiicv4uwcag" path="res://nodes/player/player_character.tscn" id="2_68qd2"]
+[ext_resource type="PackedScene" uid="uid://cgcl07qiwawui" path="res://nodes/arrow_spawner/arrow_spawner.tscn" id="3_xybn2"]
+[ext_resource type="Resource" uid="uid://dute5ilp142a5" path="res://content/arrow_timeline_registry.tres" id="4_o3b4p"]
+[ext_resource type="PackedScene" uid="uid://bwcaiilfdxjeb" path="res://nodes/bounds.tscn" id="5_622bm"]
+[ext_resource type="PackedScene" uid="uid://bi1p1sul5tdrj" path="res://nodes/player/player_camera.tscn" id="6_nop3y"]
+
+[node name="Env" type="Node2D" unique_id=1627808306]
+
+[node name="Background" parent="." unique_id=7560942 instance=ExtResource("1_qrg0e")]
+
+[node name="PlayerCharacter" parent="." unique_id=1176646513 instance=ExtResource("2_68qd2")]
+
+[node name="ArrowSpawner" parent="." unique_id=276560459 node_paths=PackedStringArray("min_spawn_point_node", "max_spawn_point_node", "min_destruction_point_node") instance=ExtResource("3_xybn2")]
+min_spawn_point_node = NodePath("SpawnMin")
+max_spawn_point_node = NodePath("SpawnMax")
+min_destruction_point_node = NodePath("DeletionMin")
+timeline_registry = ExtResource("4_o3b4p")
+
+[node name="SpawnMin" type="Node2D" parent="ArrowSpawner" unique_id=395373358]
+position = Vector2(700, -327)
+
+[node name="SpawnMax" type="Node2D" parent="ArrowSpawner" unique_id=727008278]
+position = Vector2(700, 329)
+
+[node name="DeletionMin" type="Node2D" parent="ArrowSpawner" unique_id=2146093031]
+position = Vector2(-692, 0)
+
+[node name="Bounds" type="Node2D" parent="." unique_id=331395043]
+
+[node name="Bounds top" parent="Bounds" unique_id=1977364124 instance=ExtResource("5_622bm")]
+position = Vector2(0, -350)
+scale = Vector2(23.36, 1)
+
+[node name="Bounds bottom" parent="Bounds" unique_id=1250596278 instance=ExtResource("5_622bm")]
+position = Vector2(0, 351)
+scale = Vector2(23.36, 1)
+
+[node name="Bounds left" parent="Bounds" unique_id=782956776 instance=ExtResource("5_622bm")]
+position = Vector2(-315, -1.36069e-12)
+rotation = 1.5708
+scale = Vector2(23.36, 1)
+
+[node name="Bounds right" parent="Bounds" unique_id=1119782761 instance=ExtResource("5_622bm")]
+position = Vector2(211, 1)
+rotation = 1.5708
+scale = Vector2(23.36, 1)
+
+[node name="PlayerCamera" parent="." unique_id=332213508 instance=ExtResource("6_nop3y")]

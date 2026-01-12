@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://04atsbtlul2t"]
+
+[ext_resource type="Script" uid="uid://c7j60e7uncupm" path="res://scripts/arrow/arrow_base.gd" id="1_i6y1l"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_76ud5"]
+
+[sub_resource type="Gradient" id="Gradient_w6a4o"]
+offsets = PackedFloat32Array(0.584, 0.637333, 0.72, 1)
+colors = PackedColorArray(0.45098, 0, 0.101961, 0, 0.388789, 0, 0.049972, 1, 0.741488, 0, 0.133569, 1, 0.742543, 0, 0.134366, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_did72"]
+frequency = 0.033
+metadata/_preview_in_3d_space_ = true
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_qpx2a"]
+width = 20
+height = 20
+noise = SubResource("FastNoiseLite_did72")
+color_ramp = SubResource("Gradient_w6a4o")
+
+[node name="ArrowFast" type="CharacterBody2D" unique_id=1649218582]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("1_i6y1l")
+speed = 700.0
+shape = SubResource("RectangleShape2D_76ud5")
+texture = SubResource("NoiseTexture2D_qpx2a")

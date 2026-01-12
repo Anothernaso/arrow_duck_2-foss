@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://p84jofw6e24e"]
+
+[ext_resource type="PackedScene" uid="uid://tjmbbdbl0gld" path="res://nodes/music/music.tscn" id="1_8sih3"]
+[ext_resource type="Script" uid="uid://br1shkylnm6ne" path="res://root.gd" id="1_ifjjg"]
+[ext_resource type="PackedScene" uid="uid://c1j8p0dxi0l7b" path="res://scenes/game/game.tscn" id="2_e4hyi"]
+[ext_resource type="PackedScene" uid="uid://dqqhbyuyyj1si" path="res://scenes/death_screen/death_screen.tscn" id="3_evw1p"]
+[ext_resource type="PackedScene" uid="uid://bup3qkf8uwv5k" path="res://scenes/main_menu/main_menu.tscn" id="4_lgj4t"]
+
+[node name="Root" type="Node" unique_id=896492155]
+script = ExtResource("1_ifjjg")
+game_scene = ExtResource("2_e4hyi")
+death_screen_scene = ExtResource("3_evw1p")
+main_menu_scene = ExtResource("4_lgj4t")
+
+[node name="Music" parent="." unique_id=619634676 instance=ExtResource("1_8sih3")]

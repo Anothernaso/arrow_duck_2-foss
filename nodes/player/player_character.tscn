@@ -1,0 +1,115 @@
+[gd_scene format=3 uid="uid://pgiicv4uwcag"]
+
+[ext_resource type="Script" uid="uid://ds0u0fa6xqm6i" path="res://nodes/player/player_character.gd" id="1_hs8q7"]
+[ext_resource type="Texture2D" uid="uid://ghpw681ojcra" path="res://textures/duck.png" id="2_ysjql"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_amjri"]
+size = Vector2(50, 50)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v4ioq"]
+size = Vector2(30, 30)
+
+[sub_resource type="Theme" id="Theme_os3dj"]
+default_font_size = 35
+
+[node name="PlayerCharacter" type="CharacterBody2D" unique_id=194471568]
+script = ExtResource("1_hs8q7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=956746031]
+shape = SubResource("RectangleShape2D_amjri")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=323701600]
+scale = Vector2(0.17, 0.17)
+texture = ExtResource("2_ysjql")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1312052553]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1679202530]
+shape = SubResource("RectangleShape2D_v4ioq")
+
+[node name="TouchScreenUI" type="CanvasLayer" parent="." unique_id=353893251]
+
+[node name="Control" type="Control" parent="TouchScreenUI" unique_id=730793939]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="Down" type="Button" parent="TouchScreenUI/Control" unique_id=531730286]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -247.928
+offset_top = -232.0
+offset_right = -127.928
+offset_bottom = -104.0
+grow_horizontal = 0
+grow_vertical = 0
+theme = SubResource("Theme_os3dj")
+text = "Down
+"
+
+[node name="Up" type="Button" parent="TouchScreenUI/Control" unique_id=437422244]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -247.928
+offset_top = -408.0
+offset_right = -127.928
+offset_bottom = -280.0
+grow_horizontal = 0
+grow_vertical = 0
+rotation = 0.000559724
+theme = SubResource("Theme_os3dj")
+text = "Up
+"
+
+[node name="Right" type="Button" parent="TouchScreenUI/Control" unique_id=1450330704]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 296.0
+offset_top = -232.0
+offset_right = 416.0
+offset_bottom = -104.0
+grow_vertical = 0
+theme = SubResource("Theme_os3dj")
+text = "Right
+"
+
+[node name="Left" type="Button" parent="TouchScreenUI/Control" unique_id=1663419925]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 128.0
+offset_top = -232.0
+offset_right = 248.0
+offset_bottom = -104.0
+grow_vertical = 0
+rotation = 0.000559724
+theme = SubResource("Theme_os3dj")
+text = "Left"
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="button_down" from="TouchScreenUI/Control/Down" to="." method="_on_down_button_down"]
+[connection signal="button_up" from="TouchScreenUI/Control/Down" to="." method="_on_down_button_up"]
+[connection signal="button_down" from="TouchScreenUI/Control/Up" to="." method="_on_up_button_down"]
+[connection signal="button_up" from="TouchScreenUI/Control/Up" to="." method="_on_up_button_up"]
+[connection signal="button_down" from="TouchScreenUI/Control/Right" to="." method="_on_right_button_down"]
+[connection signal="button_up" from="TouchScreenUI/Control/Right" to="." method="_on_right_button_up"]
+[connection signal="button_down" from="TouchScreenUI/Control/Left" to="." method="_on_left_button_down"]
+[connection signal="button_up" from="TouchScreenUI/Control/Left" to="." method="_on_left_button_up"]

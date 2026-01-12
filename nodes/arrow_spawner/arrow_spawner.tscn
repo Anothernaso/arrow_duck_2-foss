@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cgcl07qiwawui"]
+
+[ext_resource type="Script" uid="uid://c4xm3jgeqmn4c" path="res://nodes/arrow_spawner/arrow_spawner.gd" id="1_4kma1"]
+
+[node name="ArrowSpawner" type="Node2D" unique_id=1475763915]
+script = ExtResource("1_4kma1")
+
+[node name="ArrowHolder" type="Node2D" parent="." unique_id=1491429662]
+
+[node name="Timer" type="Timer" parent="." unique_id=1347216608]

@@ -1,0 +1,51 @@
+[gd_resource type="Resource" script_class="ArrowTimeline" format=3 uid="uid://lfakvi3u4xmp"]
+
+[ext_resource type="Script" uid="uid://cmdhhiu7aw3ny" path="res://scripts/arrow/arrow_sequence.gd" id="1_seyqg"]
+[ext_resource type="PackedScene" uid="uid://mywnkf0af500" path="res://content/arrows/arrow_basic.tscn" id="2_7nxa2"]
+[ext_resource type="PackedScene" uid="uid://bax2g7hqv7ce4" path="res://content/arrows/arrow_fire.tscn" id="3_7tqml"]
+[ext_resource type="PackedScene" uid="uid://duc2gqn6a5yea" path="res://content/arrows/arrow_super_speed.tscn" id="4_bgxq3"]
+[ext_resource type="PackedScene" uid="uid://04atsbtlul2t" path="res://content/arrows/arrow_fast.tscn" id="5_exmnu"]
+[ext_resource type="PackedScene" uid="uid://dn3we1fu4vmju" path="res://content/arrows/arrow_medium.tscn" id="6_arwvj"]
+[ext_resource type="Script" uid="uid://ysy7kt8civ23" path="res://scripts/arrow/arrow_timeline.gd" id="7_hgr0h"]
+
+[sub_resource type="Resource" id="Resource_tpgpo"]
+script = ExtResource("1_seyqg")
+scene = ExtResource("2_7nxa2")
+
+[sub_resource type="Resource" id="Resource_5oynr"]
+script = ExtResource("1_seyqg")
+min_survival_time = 5
+max_survival_time = 20
+scene = ExtResource("2_7nxa2")
+
+[sub_resource type="Resource" id="Resource_wyp2e"]
+script = ExtResource("1_seyqg")
+min_survival_time = 5
+max_survival_time = 20
+scene = ExtResource("2_7nxa2")
+
+[sub_resource type="Resource" id="Resource_j44gt"]
+script = ExtResource("1_seyqg")
+min_survival_time = 10
+max_survival_time = 13
+scene = ExtResource("3_7tqml")
+
+[sub_resource type="Resource" id="Resource_4qh8i"]
+script = ExtResource("1_seyqg")
+min_survival_time = 15
+scene = ExtResource("4_bgxq3")
+
+[sub_resource type="Resource" id="Resource_84dhi"]
+script = ExtResource("1_seyqg")
+min_survival_time = 20
+scene = ExtResource("5_exmnu")
+
+[sub_resource type="Resource" id="Resource_2fn3t"]
+script = ExtResource("1_seyqg")
+min_survival_time = 20
+scene = ExtResource("6_arwvj")
+
+[resource]
+script = ExtResource("7_hgr0h")
+start_time = 70.0
+registry = Array[ExtResource("1_seyqg")]([SubResource("Resource_tpgpo"), SubResource("Resource_5oynr"), SubResource("Resource_wyp2e"), SubResource("Resource_j44gt"), SubResource("Resource_4qh8i"), SubResource("Resource_84dhi"), SubResource("Resource_2fn3t")])
