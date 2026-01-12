@@ -16,7 +16,8 @@ config/version="3.2.0"
 run/main_scene="res://root.tscn"
 config/features=PackedStringArray("4.6", "Forward Plus")
 boot_splash/bg_color=Color(0.246792, 0.734962, 1, 1)
-boot_splash/image="res://textures/duck.png"
+boot_splash/stretch_mode=4
+boot_splash/image="uid://dsyqd0hyae2ea"
 config/icon="uid://ghpw681ojcra"
 
 [audio]
