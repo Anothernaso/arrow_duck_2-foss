@@ -1,15 +1,15 @@
-extends Node2D
-
 class_name ArrowSpawner
+extends Node2D
 
 static var singleton: ArrowSpawner
 
-const SAVE_PATH: String = "user://persistent"
+const PERSISTENT_DIR: String = "user://persistent"
 const CURRENT_TIMELINE_FILE_NAME: String = "data.tres"
 
 @export var min_spawn_point_node: Node2D
 @export var max_spawn_point_node: Node2D
 @export var min_destruction_point_node: Node2D
+
 static var min_spawn_point: Vector2
 static var max_spawn_point: Vector2
 static var min_destruction_point: Vector2
@@ -28,17 +28,21 @@ func _ready() -> void:
 	singleton = self
 	set_up.call_deferred()
 
-
-func restart_current_timeline():
+## A function that resets the current timeline.
+## It also resets the current score.
+func restart_current_timeline() -> void:
 	total_timeline_position -= current_timeline_position
 	ScoreCounter.singleton.time_survived = 0
 	current_timeline_position = 0
 
-func set_up():
+## Sets up the ArrowSpawner.
+func set_up() -> void:
 	min_spawn_point = min_spawn_point_node.position
 	max_spawn_point = max_spawn_point_node.position
 	min_destruction_point = min_destruction_point_node.position
 	
+	# I have no idea why the ScoreManager is ticking the ArrowSpawner.
+	# It should be the other way around.
 	ScoreCounter.singleton.time_tick.connect(time_tick)
 	
 	if current_timeline == null:
@@ -47,13 +51,17 @@ func set_up():
 	update_timeline()
 	
 
-func time_tick(_delta: float):
+## A functions that ticks the timeline.
+func time_tick(_delta: float) -> void:
 	current_timeline_position += 1
 	total_timeline_position += 1
 	update_timeline()
 	spawn_random()
 
-func update_timeline():
+## A function that checks if the current timeline has finished,
+## if so, it sets the next timeline as the current one.
+## This functions should run every time-tick.
+func update_timeline() -> void:
 	for timeline: ArrowTimeline in timeline_registry.timelines:
 		if roundi(current_timeline_position) != roundi(timeline.start_time): continue
 		if timeline_registry.timelines.find(timeline) != timeline_registry.timelines.find(current_timeline) + 1: continue
@@ -66,7 +74,9 @@ func update_timeline():
 		
 	
 
-func spawn_random():
+## A function that is called every time-tick and handles arrow spawning.
+## It finds the correct arrows to spawn and spawns them.
+func spawn_random() -> void:
 	print("📢 WEEE WOOOO WEEE WOOO!! Spawning Arrow! 📢")
 	
 	if !current_timeline: return
@@ -88,14 +98,16 @@ func spawn_random():
 		
 	
 
-func save_tl():
+## Saves what timeline we are currently in.
+func save_tl() -> void:
 	var data: SaveDataWrapper = SaveDataWrapper.new()
 	data.current_timeline_index = timeline_registry.timelines.rfind(current_timeline)
 	
-	SaverUtils.save(data, SAVE_PATH, CURRENT_TIMELINE_FILE_NAME)
+	SaverUtils.save(data, PERSISTENT_DIR, CURRENT_TIMELINE_FILE_NAME)
 
-func load_tl():
-	var data: SaveDataWrapper = SaverUtils.load(SAVE_PATH, CURRENT_TIMELINE_FILE_NAME)
+## Loads what timeline we were in when saving.
+func load_tl() -> void:
+	var data: SaveDataWrapper = SaverUtils.load(PERSISTENT_DIR, CURRENT_TIMELINE_FILE_NAME)
 	
 	if !data:
 		current_timeline = timeline_registry.timelines[0]

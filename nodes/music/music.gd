@@ -1,3 +1,6 @@
+# A singleton Node that lives in the Root scene.
+# It continuously plays random tracks from a MusicRegistry.
+
 class_name Music
 extends Node
 
