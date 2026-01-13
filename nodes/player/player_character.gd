@@ -17,7 +17,7 @@ func _ready() -> void:
 		$TouchScreenUI.queue_free()
 	
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	
 	var touch: Vector2
 	

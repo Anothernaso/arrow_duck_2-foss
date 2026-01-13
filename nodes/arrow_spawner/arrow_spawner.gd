@@ -3,8 +3,7 @@ extends Node2D
 
 static var singleton: ArrowSpawner
 
-const PERSISTENT_DIR: String = "user://persistent"
-const CURRENT_TIMELINE_FILE_NAME: String = "data.tres"
+const CURRENT_TIMELINE_FILE_NAME: String = "current_timeline.tres"
 
 @export var min_spawn_point_node: Node2D
 @export var max_spawn_point_node: Node2D
@@ -14,6 +13,12 @@ static var min_spawn_point: Vector2
 static var max_spawn_point: Vector2
 static var min_destruction_point: Vector2
 
+## I don't even know what this does.
+## It doesn't seem to have any usages.
+## I probably stopped using it when I added the ScoreCounter back in 2024.
+##
+## - Anatnaso
+##
 @export var spawn_delay: float = 3
 @export var timeline_registry: ArrowTimelineRegistry
 
@@ -26,7 +31,7 @@ static var current_timeline: ArrowTimeline = null
 
 func _ready() -> void:
 	singleton = self
-	set_up.call_deferred()
+	initialize.call_deferred()
 
 ## A function that resets the current timeline.
 ## It also resets the current score.
@@ -35,8 +40,8 @@ func restart_current_timeline() -> void:
 	ScoreCounter.singleton.time_survived = 0
 	current_timeline_position = 0
 
-## Sets up the ArrowSpawner.
-func set_up() -> void:
+## Initializes the ArrowSpawner.
+func initialize() -> void:
 	min_spawn_point = min_spawn_point_node.position
 	max_spawn_point = max_spawn_point_node.position
 	min_destruction_point = min_destruction_point_node.position
@@ -103,11 +108,11 @@ func save_tl() -> void:
 	var data: SaveDataWrapper = SaveDataWrapper.new()
 	data.current_timeline_index = timeline_registry.timelines.rfind(current_timeline)
 	
-	SaverUtils.save(data, PERSISTENT_DIR, CURRENT_TIMELINE_FILE_NAME)
+	SaverUtils.save(data, Constants.PERSISTENT_DIR, CURRENT_TIMELINE_FILE_NAME)
 
 ## Loads what timeline we were in when saving.
 func load_tl() -> void:
-	var data: SaveDataWrapper = SaverUtils.load(PERSISTENT_DIR, CURRENT_TIMELINE_FILE_NAME)
+	var data: SaveDataWrapper = SaverUtils.load(Constants.PERSISTENT_DIR, CURRENT_TIMELINE_FILE_NAME)
 	
 	if !data:
 		current_timeline = timeline_registry.timelines[0]
