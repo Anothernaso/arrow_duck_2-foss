@@ -9,10 +9,12 @@ script = ExtResource("1_4kma1")
 
 [node name="Timer" type="Timer" parent="." unique_id=1347216608]
 
-[node name="For some reason there is an unused timer here" type="Node" parent="." unique_id=1740848865]
+[node name="README" type="Node" parent="." unique_id=1466885542]
 
-[node name="---------------------------------" type="Node" parent="." unique_id=1931664911]
+[node name="For some reason there is an unused timer here" type="Node" parent="README" unique_id=1740848865]
 
-[node name="It was probably used before" type="Node" parent="." unique_id=1052671637]
+[node name="---------------------------------" type="Node" parent="README" unique_id=1931664911]
 
-[node name="the ScoreCounter and TimeTicker was added" type="Node" parent="." unique_id=661340514]
+[node name="It was probably used before" type="Node" parent="README" unique_id=1052671637]
+
+[node name="the ScoreCounter and TimeTicker was added" type="Node" parent="README" unique_id=661340514]

@@ -2,11 +2,12 @@
 
 [ext_resource type="Script" uid="uid://5d0v605nsdoa" path="res://scripts/arrow/arrow_timeline_registry.gd" id="1_w6cp1"]
 [ext_resource type="Script" uid="uid://ysy7kt8civ23" path="res://scripts/arrow/arrow_timeline.gd" id="2_xuq2u"]
-[ext_resource type="Resource" uid="uid://xt4030hbk534" path="res://content/timelines/0_arrow_level_intro.tres" id="3_7msnu"]
-[ext_resource type="Resource" uid="uid://lfakvi3u4xmp" path="res://content/timelines/1_arrow_level.tres" id="5_gywcg"]
-[ext_resource type="Resource" uid="uid://cqmeq84mtrtba" path="res://content/timelines/2_arrow_level.tres" id="5_uigu8"]
-[ext_resource type="Resource" uid="uid://cwftoumlp0nbd" path="res://content/timelines/3_arrow_level.tres" id="6_82jl6"]
+[ext_resource type="Resource" uid="uid://xt4030hbk534" path="res://content/timelines/0_arrow_level_intro.tres" id="3_vwp3f"]
+[ext_resource type="Resource" uid="uid://lfakvi3u4xmp" path="res://content/timelines/1_arrow_level.tres" id="4_sfs4q"]
+[ext_resource type="Resource" uid="uid://cqmeq84mtrtba" path="res://content/timelines/2_arrow_level.tres" id="5_6yuxv"]
+[ext_resource type="Resource" uid="uid://cwftoumlp0nbd" path="res://content/timelines/3_arrow_level.tres" id="6_jlxpu"]
+[ext_resource type="Resource" uid="uid://bcix8r3d3shee" path="res://content/timelines/4_fast_arrow_hell.tres" id="7_vwp3f"]
 
 [resource]
 script = ExtResource("1_w6cp1")
-timelines = Array[ExtResource("2_xuq2u")]([ExtResource("3_7msnu"), ExtResource("5_gywcg"), ExtResource("5_uigu8"), ExtResource("6_82jl6")])
+timelines = Array[ExtResource("2_xuq2u")]([ExtResource("3_vwp3f"), ExtResource("4_sfs4q"), ExtResource("5_6yuxv"), ExtResource("6_jlxpu"), ExtResource("7_vwp3f")])
