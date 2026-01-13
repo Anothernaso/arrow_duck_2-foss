@@ -15,3 +15,7 @@ func _on_quit_button_down() -> void:
 
 func _on_start_button_down() -> void:
 	Root.singleton.enter_game.call_deferred()
+
+func _on_delete_data_button_down() -> void:
+	SaverUtils.delete(Constants.PERSISTENT_DIR, Constants.CURRENT_TIMELINE_FILE_NAME)
+	SaverUtils.delete(Constants.PERSISTENT_DIR, Constants.HIGHSCORE_FILE_NAME)

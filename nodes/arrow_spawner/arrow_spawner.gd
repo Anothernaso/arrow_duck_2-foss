@@ -3,8 +3,6 @@ extends Node2D
 
 static var singleton: ArrowSpawner
 
-const CURRENT_TIMELINE_FILE_NAME: String = "current_timeline.tres"
-
 @export var min_spawn_point_node: Node2D
 @export var max_spawn_point_node: Node2D
 @export var min_destruction_point_node: Node2D
@@ -104,18 +102,18 @@ func spawn_random() -> void:
 
 ## Saves what timeline we are currently in.
 func save_tl() -> void:
-	var data: SaveDataWrapper = SaveDataWrapper.new()
-	data.current_timeline_index = timeline_registry.timelines.rfind(current_timeline)
+	var wrapper := CurrentTimelineWrapper.new()
+	wrapper.current_timeline_index = timeline_registry.timelines.rfind(current_timeline)
 	
-	SaverUtils.save(data, Constants.PERSISTENT_DIR, CURRENT_TIMELINE_FILE_NAME)
+	SaverUtils.save(wrapper, Constants.PERSISTENT_DIR, Constants.CURRENT_TIMELINE_FILE_NAME)
 
 ## Loads what timeline we were in when saving.
 func load_tl() -> void:
-	var data: SaveDataWrapper = SaverUtils.load(Constants.PERSISTENT_DIR, CURRENT_TIMELINE_FILE_NAME)
+	var wrapper := SaverUtils.load(Constants.PERSISTENT_DIR, Constants.CURRENT_TIMELINE_FILE_NAME) as CurrentTimelineWrapper
 	
-	if !data:
+	if !wrapper:
 		current_timeline = timeline_registry.timelines[0]
 		return
 	
-	current_timeline = timeline_registry.timelines[data.current_timeline_index]
+	current_timeline = timeline_registry.timelines[wrapper.current_timeline_index]
 	

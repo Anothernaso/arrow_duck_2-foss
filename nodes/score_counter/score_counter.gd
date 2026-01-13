@@ -8,8 +8,6 @@ static var last_time_survived: float = 0
 static var time_survived: float = 0
 static var highscore_time_survived: float = 0
 
-const HIGHSCORE_FILE_NAME: String = "highscore.tres"
-
 func _ready() -> void:
 	singleton = self
 	
@@ -55,11 +53,11 @@ static func _save_highscore() -> void:
 	var wrapper: HighscoreWrapper = HighscoreWrapper.new()
 	wrapper.highscore = highscore_time_survived
 	
-	SaverUtils.save(wrapper, Constants.PERSISTENT_DIR, HIGHSCORE_FILE_NAME)
+	SaverUtils.save(wrapper, Constants.PERSISTENT_DIR, Constants.HIGHSCORE_FILE_NAME)
 	
 
 static func _load_highscore() -> void:
-	var wrapper := SaverUtils.load(Constants.PERSISTENT_DIR, HIGHSCORE_FILE_NAME) as HighscoreWrapper
+	var wrapper := SaverUtils.load(Constants.PERSISTENT_DIR, Constants.HIGHSCORE_FILE_NAME) as HighscoreWrapper
 	
 	if !wrapper: return
 	
