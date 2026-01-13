@@ -46,9 +46,7 @@ func initialize() -> void:
 	max_spawn_point = max_spawn_point_node.position
 	min_destruction_point = min_destruction_point_node.position
 	
-	# I have no idea why the ScoreManager is ticking the ArrowSpawner.
-	# It should be the other way around.
-	ScoreCounter.singleton.time_tick.connect(time_tick)
+	TimeTicker.singleton.on_tick.connect(time_tick)
 	
 	if current_timeline == null:
 		load_tl()
@@ -57,11 +55,12 @@ func initialize() -> void:
 	
 
 ## A functions that ticks the timeline.
-func time_tick(_delta: float) -> void:
-	current_timeline_position += 1
-	total_timeline_position += 1
+func time_tick(delta: float) -> void:
+	current_timeline_position += delta
+	total_timeline_position += delta
 	update_timeline()
 	spawn_random()
+	
 
 ## A function that checks if the current timeline has finished,
 ## if so, it sets the next timeline as the current one.

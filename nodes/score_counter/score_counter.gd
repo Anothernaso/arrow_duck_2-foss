@@ -10,18 +10,20 @@ static var highscore_time_survived: float = 0
 
 const HIGHSCORE_FILE_NAME: String = "highscore.tres"
 
-signal time_tick(delta: float)
-
 func _ready() -> void:
 	singleton = self
 	
 	_load_highscore()
-	
 	$CanvasLayer/Control/HighScore.text = "Highscore: " + FormatUtils.format_time(highscore_time_survived)
 	
+	initialize.call_deferred()
+	
 
-func _on_timer_timeout() -> void:
-	time_survived += $Timer.wait_time
+func initialize() -> void:
+	TimeTicker.singleton.after_tick.connect(_after_tick)
+
+func _after_tick(delta: float) -> void:
+	time_survived += delta
 	
 	# Get the time where the next timeline will begin
 	# so that we can update the HUD accordingly.
@@ -40,7 +42,6 @@ func _on_timer_timeout() -> void:
 	$CanvasLayer/Control/ProgressBar.value = ArrowSpawner.singleton.current_timeline_position
 	$CanvasLayer/Control/ProgressInfo.text = "Time left:\n" + FormatUtils.format_time(next_start_time - ArrowSpawner.singleton.current_timeline_position)
 	
-	time_tick.emit($Timer.wait_time)
 
 static func update_highscore() -> void:
 	last_time_survived = time_survived
