@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="CloudRegistry" format=3 uid="uid://8thpwy4kgorg"]
+
+[ext_resource type="Script" uid="uid://coynhk636lwfj" path="res://scripts/cloud/cloud_registry.gd" id="1_bmwax"]
+[ext_resource type="PackedScene" uid="uid://dholwrbwg7t6k" path="res://content/clouds/cloud.tscn" id="1_dchuq"]
+
+[resource]
+script = ExtResource("1_bmwax")
+cloud_scenes = Array[PackedScene]([ExtResource("1_dchuq")])
+metadata/_custom_type_script = "uid://coynhk636lwfj"

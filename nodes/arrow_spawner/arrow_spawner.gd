@@ -40,9 +40,9 @@ func restart_current_timeline() -> void:
 
 ## Initializes the ArrowSpawner.
 func initialize() -> void:
-	min_spawn_point = min_spawn_point_node.position
-	max_spawn_point = max_spawn_point_node.position
-	min_destruction_point = min_destruction_point_node.position
+	min_spawn_point = min_spawn_point_node.global_position
+	max_spawn_point = max_spawn_point_node.global_position
+	min_destruction_point = min_destruction_point_node.global_position
 	
 	TimeTicker.singleton.on_tick.connect(time_tick)
 	
@@ -89,13 +89,10 @@ func spawn_random() -> void:
 		if arrow.min_survival_time > current_timeline_position or arrow.max_survival_time < current_timeline_position:
 			continue
 		
-		var spawn_pos_y: float = randi_range(min_spawn_point.y, max_spawn_point.y)
-		var spawn_pos_x: float = randi_range(min_spawn_point.x, max_spawn_point.x)
-	
-		var spawn_pos: Vector2 = Vector2(spawn_pos_x, spawn_pos_y)
+		var spawn_pos := Vector2Utils.randv2_range(min_spawn_point, max_spawn_point) 
 		
 		var arrow_node: Node2D = arrow.scene.instantiate()
-		arrow_node.position = spawn_pos
+		arrow_node.global_position = spawn_pos
 		arrow_holder.add_child.call_deferred(arrow_node)
 		
 	

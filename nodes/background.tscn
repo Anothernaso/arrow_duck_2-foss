@@ -41,29 +41,36 @@ shader_parameter/speed = 11.50000054625
 scale = Vector2(3, 3)
 
 [node name="Background1" type="Sprite2D" parent="." unique_id=1293438526]
+z_index = -9
 material = SubResource("ShaderMaterial_3n47u")
 texture = ExtResource("2_v20sc")
 
 [node name="Background2" type="Sprite2D" parent="." unique_id=266661447]
+z_index = -7
 material = SubResource("ShaderMaterial_h7xmx")
 texture = ExtResource("3_v20sc")
 
 [node name="Background3" type="Sprite2D" parent="." unique_id=2095611402]
+z_index = -5
 material = SubResource("ShaderMaterial_qgm0n")
 texture = ExtResource("4_v20sc")
 
 [node name="Background4" type="Sprite2D" parent="." unique_id=1099606168]
+z_index = -3
 material = SubResource("ShaderMaterial_chnqs")
 texture = ExtResource("5_v20sc")
 
 [node name="Background5" type="Sprite2D" parent="." unique_id=1967665843]
+z_index = -3
 material = SubResource("ShaderMaterial_82vyg")
 texture = ExtResource("6_chnqs")
 
 [node name="Background6" type="Sprite2D" parent="." unique_id=1913443702]
+z_index = -3
 material = SubResource("ShaderMaterial_o0frb")
 texture = ExtResource("7_idd23")
 
 [node name="Background7" type="Sprite2D" parent="." unique_id=150475992]
+z_index = -1
 material = SubResource("ShaderMaterial_42jju")
 texture = ExtResource("8_o0frb")

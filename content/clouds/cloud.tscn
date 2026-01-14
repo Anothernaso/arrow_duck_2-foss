@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dholwrbwg7t6k"]
+
+[ext_resource type="Script" uid="uid://ccu8oxoerb743" path="res://scripts/cloud/cloud_base.gd" id="1_fnj18"]
+[ext_resource type="Texture2D" uid="uid://dr20x1b2bxe00" path="res://textures/clouds/clouds_1.png" id="2_sr1ed"]
+[ext_resource type="Script" uid="uid://hojlll13g3y6" path="res://scripts/cloud/cloud_dynamic_visual.gd" id="3_qsvju"]
+
+[node name="Cloud" type="CharacterBody2D" unique_id=869515769]
+script = ExtResource("1_fnj18")
+metadata/_custom_type_script = "uid://ccu8oxoerb743"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1014879583]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_sr1ed")
+script = ExtResource("3_qsvju")
+
+[node name="README" type="Node" parent="." unique_id=726847376]
+
+[node name="This node isn\'t meant to have a CollisionShape" type="Node" parent="README" unique_id=1099193660]

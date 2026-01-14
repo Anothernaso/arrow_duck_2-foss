@@ -20,12 +20,12 @@ func _ready() -> void:
 	add_child.call_deferred(sprite)
 	
 
-func _process(_delta: float) -> void:
-	if position.x < ArrowSpawner.min_destruction_point.x:
-		queue_free()
-
 func _physics_process(_delta: float) -> void:
+	if global_position.x < ArrowSpawner.min_destruction_point.x:
+		queue_free()
+	
 	velocity.x = -speed
 	velocity.y = 0
 	
 	move_and_slide()
+	
