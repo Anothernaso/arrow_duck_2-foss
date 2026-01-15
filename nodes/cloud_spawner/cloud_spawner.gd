@@ -28,12 +28,16 @@ func _on_tick(_delta: float) -> void:
 			cloud_registry.cloud_scenes
 		) as PackedScene
 	
-	var cloud := cloud_scene.instantiate() as CloudBase
-	var spawn_position := Vector2Utils.randv2_range(
-		min_spawn_point.global_position,
-		max_spawn_point.global_position
+	Pooler.singleton.dispool_node(
+		cloud_scene,
+		cloud_holder,
+		func(cloud: CloudBase):
+			if !cloud: return
+			
+			var spawn_position := Vector2Utils.randv2_range(
+				min_spawn_point.global_position,
+				max_spawn_point.global_position,
+			)
+			cloud.global_position = spawn_position
 	)
-	
-	cloud.global_position = spawn_position
-	cloud_holder.add_child(cloud)
 	

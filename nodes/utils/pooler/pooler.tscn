@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cib1w6c5wa2eq"]
+
+[ext_resource type="Script" uid="uid://bywt3n2hofvta" path="res://nodes/utils/pooler/pooler.gd" id="1_ebvjw"]
+
+[node name="Pooler" type="Node" unique_id=295166021]
+script = ExtResource("1_ebvjw")

@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://c5uqtv8wu0kud"]
+
+[ext_resource type="Script" uid="uid://cwmv5wypppg47" path="res://nodes/utils/scheduler/scheduler.gd" id="1_6vt3l"]
+
+[node name="Scheduler" type="Node" unique_id=268562393]
+process_mode = 3
+process_thread_group = 2
+process_thread_group_order = 0
+process_thread_messages = 2
+script = ExtResource("1_6vt3l")
