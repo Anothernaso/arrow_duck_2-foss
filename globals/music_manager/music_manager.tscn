@@ -4,9 +4,10 @@
 
 [node name="MusicManager" type="Node" unique_id=1552190545]
 script = ExtResource("1_ae4ak")
+_volume = -12.0
+_fade_time = 2.5
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=12255203]
-volume_db = -10.0
 playback_type = 1
 
 [connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]

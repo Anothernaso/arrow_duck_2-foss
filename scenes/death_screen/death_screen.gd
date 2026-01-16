@@ -5,7 +5,7 @@ class_name DeathScreen
 @export var album: MusicAlbum
 
 func _ready() -> void:
-	MusicManager.set_album(album)
+	MusicManager.set_album(album, true)
 	
 	$UI/Control/Panel/Score.text = "Time survived: " + FormatUtils.format_time(ScoreCounter.last_time_survived)
 	$UI/Control/Panel/Highscore.text = "Highscore: " + FormatUtils.format_time(ScoreCounter.highscore_time_survived)

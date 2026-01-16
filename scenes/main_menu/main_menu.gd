@@ -6,7 +6,7 @@ class_name MainMenu
 @export var album: MusicAlbum
 
 func _ready() -> void:
-	MusicManager.set_album(album)
+	MusicManager.set_album(album, true)
 	
 
 func _on_quit_button_down() -> void:
