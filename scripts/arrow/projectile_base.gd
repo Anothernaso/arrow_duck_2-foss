@@ -1,4 +1,4 @@
-class_name ArrowBase
+class_name ProjectileBase
 extends CharacterBody2D
 
 @export var speed: float = 300
@@ -9,8 +9,10 @@ extends CharacterBody2D
 @onready var collider: CollisionShape2D
 @onready var sprite: Sprite2D
 
+var direction: Vector2
+
 func _ready() -> void:
-	if !is_in_group("arrow"): add_to_group("arrow")
+	if !is_in_group("projectile"): add_to_group("projectile")
 	if !is_in_group("lethal"): add_to_group("lethal")
 	
 	collider = CollisionShape2D.new()
@@ -24,11 +26,6 @@ func _ready() -> void:
 	
 
 func _physics_process(_delta: float) -> void:
-	if global_position.x < ArrowSpawner.min_destruction_point.x:
-		queue_free()
-	
-	velocity.x = -speed
-	velocity.y = 0
-	
+	velocity = direction.normalized() * speed
 	move_and_slide()
 	

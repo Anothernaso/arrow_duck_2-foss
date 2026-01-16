@@ -44,6 +44,7 @@ player=""
 cloud="A group for all clouds."
 arrow="A group for all arrows"
 lethal="A group for all things that should kill the player on impact."
+projectile="A group for all projectiles. Note that arrows are not projectiles."
 
 [input]
 

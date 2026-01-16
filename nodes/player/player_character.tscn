@@ -14,7 +14,7 @@ size = Vector2(30, 30)
 [sub_resource type="Theme" id="Theme_os3dj"]
 default_font_size = 35
 
-[node name="PlayerCharacter" type="CharacterBody2D" unique_id=194471568]
+[node name="PlayerCharacter" type="CharacterBody2D" unique_id=194471568 groups=["player"]]
 script = ExtResource("1_hs8q7")
 sfx_player_scene = ExtResource("2_woof4")
 death_sfx = ExtResource("3_tc34i")

@@ -32,7 +32,7 @@ noise = SubResource("FastNoiseLite_yrisp")
 color_ramp = SubResource("Gradient_ckg5a")
 bump_strength = 32.0
 
-[node name="Arrow1" type="CharacterBody2D" unique_id=522784732 groups=["arrow"]]
+[node name="ArrowBasic" type="CharacterBody2D" unique_id=522784732 groups=["arrow"]]
 collision_layer = 2
 collision_mask = 0
 script = ExtResource("1_kp2lp")
