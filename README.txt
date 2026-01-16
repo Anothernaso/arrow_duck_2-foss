@@ -19,9 +19,14 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
 
 Third-Party Assets (CC BY 4.0)
 ------------------------------
-- Eternity by DavidKBD
-  License: CC BY 4.0
-  URL: https://davidkbd.itch.io/purgatory-extreme-metal-music-pack
+- Music by DavidKBD
+  - Eternity (Volume 1)
+	License: CC BY 4.0
+	URL: https://davidkbd.itch.io/eternity-metal-scfi-music-pack
+
+  - Purgatory (Volume 3)
+	License: CC BY 4.0
+	URL: https://davidkbd.itch.io/purgatory-vol-3-extreme-metal-music-pack
 
 - Backgrounds by vnitti
   License: CC BY 4.0
