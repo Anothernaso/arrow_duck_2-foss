@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bdy6byeyrthxp"]
+
+[ext_resource type="Script" uid="uid://cwjcniptx7by6" path="res://nodes/projectile_zone/projectile_zone.gd" id="1_srw53"]
+
+[node name="ProjectileZone" type="Area2D" unique_id=427029415]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_srw53")
+
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

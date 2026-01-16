@@ -10,6 +10,9 @@ var collider: CollisionShape2D
 var sprite: Sprite2D
 
 func _ready() -> void:
+	if !is_in_group("arrow"): add_to_group("arrow")
+	if !is_in_group("lethal"): add_to_group("lethal")
+	
 	collider = CollisionShape2D.new()
 	sprite = Sprite2D.new()
 	

@@ -10,6 +10,8 @@ extends CharacterBody2D
 @onready var speed: float
 
 func _ready() -> void:
+	if !is_in_group("cloud"): add_to_group("cloud")
+	
 	scale = Vector2Utils.randv2_range(
 		Vector2(
 			min_scale,

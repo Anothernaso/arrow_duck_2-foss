@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://duwgn76dg4myj"]
+
+[ext_resource type="Script" uid="uid://c7j60e7uncupm" path="res://scripts/arrow/arrow_base.gd" id="1_bme1q"]
+[ext_resource type="PackedScene" uid="uid://8wtvmcs0wvlo" path="res://content/arrows/modules/explosive.tscn" id="2_5ln7d"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bme1q"]
+size = Vector2(25, 25)
+
+[sub_resource type="Gradient" id="Gradient_bme1q"]
+colors = PackedColorArray(0.2154918, 2.45166e-07, 4.813075e-08, 1, 1, 0.03137255, 0, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_5ln7d"]
+noise_type = 2
+seed = -201
+frequency = 0.1528
+fractal_lacunarity = 1.0
+fractal_gain = -0.75
+cellular_jitter = -0.5
+cellular_return_type = 0
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_qlrr0"]
+width = 25
+height = 25
+noise = SubResource("FastNoiseLite_5ln7d")
+color_ramp = SubResource("Gradient_bme1q")
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5ln7d"]
+radius = 50.0
+
+[node name="ArrowExplosive" type="CharacterBody2D" unique_id=1076627646 groups=["arrow", "lethal"]]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("1_bme1q")
+speed = 350.0
+shape = SubResource("RectangleShape2D_bme1q")
+texture = SubResource("NoiseTexture2D_qlrr0")
+metadata/_custom_type_script = "uid://c7j60e7uncupm"
+
+[node name="Explosive" parent="." unique_id=1114029869 node_paths=PackedStringArray("arrow_root") instance=ExtResource("2_5ln7d")]
+shape = SubResource("CircleShape2D_5ln7d")
+arrow_root = NodePath("..")

@@ -46,7 +46,9 @@ func _physics_process(_delta: float) -> void:
 	move_and_slide()
 	
 
-func _on_area_2d_body_entered(_body: Node2D) -> void:
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	if !body.is_in_group("lethal"): return
+	
 	printerr("💀🦆 You ducked up!! 🦆💀")
 	
 	ScoreCounter.update_highscore()

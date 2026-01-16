@@ -10,7 +10,7 @@
 script = ExtResource("1_rhsli")
 album = ExtResource("2_lfrn8")
 
-[node name="GameScene" parent="." unique_id=1177044107 instance=ExtResource("1_g5g6r")]
+[node name="Environment" parent="." unique_id=1177044107 instance=ExtResource("1_g5g6r")]
 
 [node name="TimeTicker" parent="." unique_id=1223847226 instance=ExtResource("4_lfrn8")]
 

@@ -21,7 +21,7 @@ height = 35
 noise = SubResource("FastNoiseLite_xikjx")
 color_ramp = SubResource("Gradient_kgli1")
 
-[node name="ArrowMed" type="CharacterBody2D" unique_id=1593776100]
+[node name="ArrowMed" type="CharacterBody2D" unique_id=1593776100 groups=["arrow"]]
 collision_layer = 2
 collision_mask = 0
 script = ExtResource("1_jwvuc")

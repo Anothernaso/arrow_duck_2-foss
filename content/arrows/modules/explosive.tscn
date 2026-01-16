@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://8wtvmcs0wvlo"]
+
+[ext_resource type="Script" uid="uid://du447w47g7yiu" path="res://content/arrows/modules/explosive.gd" id="1_ty0i3"]
+
+[node name="Explosive" type="Area2D" unique_id=1114029869]
+collision_layer = 0
+script = ExtResource("1_ty0i3")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

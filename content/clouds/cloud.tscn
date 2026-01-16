@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dr20x1b2bxe00" path="res://textures/clouds/clouds_1.png" id="2_sr1ed"]
 [ext_resource type="Script" uid="uid://hojlll13g3y6" path="res://scripts/cloud/cloud_dynamic_visual.gd" id="3_qsvju"]
 
-[node name="Cloud" type="CharacterBody2D" unique_id=869515769]
+[node name="Cloud" type="CharacterBody2D" unique_id=869515769 groups=["cloud"]]
 script = ExtResource("1_fnj18")
 metadata/_custom_type_script = "uid://ccu8oxoerb743"
 

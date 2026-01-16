@@ -8,8 +8,12 @@
 [ext_resource type="PackedScene" uid="uid://cede15oabb50b" path="res://nodes/cloud_spawner/cloud_spawner.tscn" id="5_wpn1q"]
 [ext_resource type="Resource" uid="uid://8thpwy4kgorg" path="res://content/cloud_registry.tres" id="6_4r44i"]
 [ext_resource type="PackedScene" uid="uid://bi1p1sul5tdrj" path="res://nodes/player/player_camera.tscn" id="6_nop3y"]
+[ext_resource type="PackedScene" uid="uid://bdy6byeyrthxp" path="res://nodes/projectile_zone/projectile_zone.tscn" id="7_xdrux"]
 
-[node name="Env" type="Node2D" unique_id=1627808306]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xdrux"]
+size = Vector2(1152, 648)
+
+[node name="Environment" type="Node2D" unique_id=1627808306]
 
 [node name="Background" parent="." unique_id=7560942 instance=ExtResource("1_qrg0e")]
 
@@ -44,6 +48,11 @@ position = Vector2(1482, 329)
 
 [node name="SpawnMin2" type="Node2D" parent="CloudSpawner" unique_id=973463052]
 position = Vector2(-1332, 0)
+
+[node name="ProjectileZone" parent="." unique_id=427029415 instance=ExtResource("7_xdrux")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ProjectileZone" unique_id=755766710]
+shape = SubResource("RectangleShape2D_xdrux")
 
 [node name="Bounds" type="Node2D" parent="." unique_id=331395043]
 
