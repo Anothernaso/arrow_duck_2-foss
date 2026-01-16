@@ -2,13 +2,13 @@
 
 [ext_resource type="PackedScene" uid="uid://tktlpcpk1j2k" path="res://nodes/environment.tscn" id="1_g5g6r"]
 [ext_resource type="Script" uid="uid://dv4wh6e1bjw8p" path="res://scenes/game/game.gd" id="1_rhsli"]
-[ext_resource type="Resource" uid="uid://byhm6xjsp2n7n" path="res://audio/music/eternity/eternity.tres" id="2_y6ptt"]
+[ext_resource type="Resource" uid="uid://c6w3eypo7py0m" path="res://content/albums/purgatory.tres" id="2_lfrn8"]
 [ext_resource type="PackedScene" uid="uid://bfqrgwsmvmows" path="res://nodes/score_counter/score_counter.tscn" id="3_cqd6c"]
 [ext_resource type="PackedScene" uid="uid://cg7jqtxkv5keq" path="res://nodes/time_ticker/time_ticker.tscn" id="4_lfrn8"]
 
 [node name="Game" type="Node" unique_id=1118455543]
 script = ExtResource("1_rhsli")
-music = ExtResource("2_y6ptt")
+album = ExtResource("2_lfrn8")
 
 [node name="GameScene" parent="." unique_id=1177044107 instance=ExtResource("1_g5g6r")]
 

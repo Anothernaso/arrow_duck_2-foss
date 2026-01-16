@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="GameStates" format=3 uid="uid://biv4qjgu23bko"]
+
+[ext_resource type="Script" uid="uid://r7sqvdarvewu" path="res://globals/game_state_manager/game_states.gd" id="1_mit2s"]
+[ext_resource type="PackedScene" uid="uid://bup3qkf8uwv5k" path="res://scenes/main_menu/main_menu.tscn" id="2_ii08n"]
+[ext_resource type="PackedScene" uid="uid://c1j8p0dxi0l7b" path="res://scenes/game/game.tscn" id="3_p64kx"]
+[ext_resource type="PackedScene" uid="uid://dqqhbyuyyj1si" path="res://scenes/death_screen/death_screen.tscn" id="4_kkahi"]
+
+[resource]
+script = ExtResource("1_mit2s")
+state_scenes = Dictionary[int, PackedScene]({
+0: ExtResource("2_ii08n"),
+1: ExtResource("3_p64kx"),
+2: ExtResource("4_kkahi")
+})
+metadata/_custom_type_script = "uid://r7sqvdarvewu"

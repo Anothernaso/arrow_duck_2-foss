@@ -12,8 +12,8 @@ config_version=5
 
 config/name="Arrow Duck 2"
 config/description="A game about a duck ducking from arrows."
-config/version="3.2.0"
-run/main_scene="res://root.tscn"
+config/version="3.3.0"
+run/main_scene="uid://lgpl40m4r1b2"
 config/features=PackedStringArray("4.6", "Forward Plus")
 boot_splash/bg_color=Color(0.246792, 0.734962, 1, 1)
 boot_splash/stretch_mode=4
@@ -23,6 +23,11 @@ config/icon="uid://ghpw681ojcra"
 [audio]
 
 driver/driver="PipeWire"
+
+[autoload]
+
+GameStateManager="*uid://ckum100t7knj4"
+MusicManager="*uid://bd1elsjt3hwrq"
 
 [display]
 

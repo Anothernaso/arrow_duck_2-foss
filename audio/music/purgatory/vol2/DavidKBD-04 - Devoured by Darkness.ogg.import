@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bjsmsnqtmkcct"
+path="res://.godot/imported/DavidKBD-04 - Devoured by Darkness.ogg-da9e3ec462855caeeef2a97bfb23d2dc.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/music/purgatory/vol2/DavidKBD-04 - Devoured by Darkness.ogg"
+dest_files=["res://.godot/imported/DavidKBD-04 - Devoured by Darkness.ogg-da9e3ec462855caeeef2a97bfb23d2dc.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

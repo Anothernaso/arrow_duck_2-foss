@@ -4,11 +4,11 @@
 [ext_resource type="PackedScene" uid="uid://bg8ahamfcwj3i" path="res://nodes/background.tscn" id="1_ebmvx"]
 [ext_resource type="Theme" uid="uid://b4knt16xuynoj" path="res://ui_themes/title_label_theme.tres" id="1_mgyuc"]
 [ext_resource type="PackedScene" uid="uid://bi1p1sul5tdrj" path="res://nodes/player/player_camera.tscn" id="2_756rb"]
-[ext_resource type="Resource" uid="uid://byhm6xjsp2n7n" path="res://audio/music/eternity/eternity.tres" id="2_ngubq"]
+[ext_resource type="Resource" uid="uid://dhwjuh6b6sghl" path="res://content/albums/eternity.tres" id="2_wem23"]
 
 [node name="MainMenu" type="Node" unique_id=200770569]
 script = ExtResource("1_76i7u")
-music = ExtResource("2_ngubq")
+album = ExtResource("2_wem23")
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=920927236]
 

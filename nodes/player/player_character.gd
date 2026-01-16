@@ -48,8 +48,7 @@ func _on_area_2d_body_entered(_body: Node2D) -> void:
 	printerr("💀🦆 You ducked up!! 🦆💀")
 	
 	ScoreCounter.update_highscore()
-	
-	Root.singleton.enter_death_screen.call_deferred()
+	GameStateManager.set_state(GameStates.State.DeathScreen)
 	
 
 

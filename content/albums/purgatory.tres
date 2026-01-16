@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="MusicAlbum" format=3 uid="uid://c6w3eypo7py0m"]
+
+[ext_resource type="Script" uid="uid://4it7qa7dq5n2" path="res://globals/music_manager/music_album.gd" id="1_vtq7o"]
+[ext_resource type="AudioStream" uid="uid://dxn4snxl7i05m" path="res://audio/music/purgatory/vol1/01 - DavidKBD - Purgatory Pack - Purgatory.ogg" id="2_0cdho"]
+[ext_resource type="AudioStream" uid="uid://cgcqn7w4pl7iy" path="res://audio/music/purgatory/vol1/02 - DavidKBD - Purgatory Pack - Gateways.ogg" id="3_35bxd"]
+[ext_resource type="AudioStream" uid="uid://u8psatn4itbj" path="res://audio/music/purgatory/vol1/03 - DavidKBD - Purgatory Pack - Sacrifice.ogg" id="4_jsyke"]
+[ext_resource type="AudioStream" uid="uid://bhf50hcsaym6j" path="res://audio/music/purgatory/vol1/04 - DavidKBD - Purgatory Pack - Life Eternal.ogg" id="5_n3132"]
+[ext_resource type="AudioStream" uid="uid://bg00uigue2m5s" path="res://audio/music/purgatory/vol1/05 - DavidKBD - Purgatory Pack - From the Dark Past.ogg" id="6_ddvbq"]
+[ext_resource type="AudioStream" uid="uid://jmc8exrse4ob" path="res://audio/music/purgatory/vol1/06 - DavidKBD - Purgatory Pack - On Fire.ogg" id="7_hfg3a"]
+[ext_resource type="AudioStream" uid="uid://by3vjt1sl0oap" path="res://audio/music/purgatory/vol1/07 - DavidKBD - Purgatory Pack - Hades.ogg" id="8_27bjc"]
+[ext_resource type="AudioStream" uid="uid://q7jd4gomjeib" path="res://audio/music/purgatory/vol1/08 - DavidKBD - Purgatory Pack - The ritualist.ogg" id="9_d0f1w"]
+[ext_resource type="AudioStream" uid="uid://bxj702wt8j806" path="res://audio/music/purgatory/vol2/DavidKBD-01 - Grave Rot Requiem.ogg" id="11_6ck0d"]
+[ext_resource type="AudioStream" uid="uid://cagf0fujcnhia" path="res://audio/music/purgatory/vol2/DavidKBD-02 - Blood Soaked Earth.ogg" id="12_x6s1y"]
+[ext_resource type="AudioStream" uid="uid://bq5j8ql5priiq" path="res://audio/music/purgatory/vol2/DavidKBD-03 - Mutilation's Melody.ogg" id="13_bcguk"]
+[ext_resource type="AudioStream" uid="uid://bjsmsnqtmkcct" path="res://audio/music/purgatory/vol2/DavidKBD-04 - Devoured by Darkness.ogg" id="14_83wvk"]
+[ext_resource type="AudioStream" uid="uid://60bt5fg7h6w0" path="res://audio/music/purgatory/vol2/DavidKBD-05 - Bone Grinder's Ballad.ogg" id="15_lldnf"]
+[ext_resource type="AudioStream" uid="uid://d1ca02nkfpold" path="res://audio/music/purgatory/vol2/DavidKBD-06 - The Slicing Strain.ogg" id="16_q8v0n"]
+[ext_resource type="AudioStream" uid="uid://ccjijppk21v3w" path="res://audio/music/purgatory/vol2/DavidKBD-07 - Visceral Vengeance.ogg" id="17_g00sd"]
+[ext_resource type="AudioStream" uid="uid://dq2kify8p6lim" path="res://audio/music/purgatory/vol2/DavidKBD-08 - Putrid Desecration.ogg" id="18_wda3e"]
+
+[resource]
+script = ExtResource("1_vtq7o")
+streams = Array[AudioStream]([ExtResource("2_0cdho"), ExtResource("3_35bxd"), ExtResource("4_jsyke"), ExtResource("5_n3132"), ExtResource("6_ddvbq"), ExtResource("7_hfg3a"), ExtResource("8_27bjc"), ExtResource("9_d0f1w"), ExtResource("11_6ck0d"), ExtResource("12_x6s1y"), ExtResource("13_bcguk"), ExtResource("14_83wvk"), ExtResource("15_lldnf"), ExtResource("16_q8v0n"), ExtResource("17_g00sd"), ExtResource("18_wda3e")])
+metadata/_custom_type_script = "uid://4it7qa7dq5n2"

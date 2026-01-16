@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://tjmbbdbl0gld"]
 
-[ext_resource type="Script" uid="uid://cuelktscthrbf" path="res://nodes/music/music.gd" id="1_rvjs3"]
+[ext_resource type="Script" uid="uid://cuelktscthrbf" path="res://nodes/legacy/music/music.gd" id="1_rvjs3"]
 [ext_resource type="AudioStream" uid="uid://brt0klpxbyywu" path="res://audio/music/eternity/DavidKBD - Eternity Pack - 01 - The desolation of a civilization - oneshoot.ogg" id="2_bgpgu"]
 
 [node name="Music" type="Node" unique_id=708879094]

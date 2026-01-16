@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dctdrh4evu2j7"
+path="res://.godot/imported/09 - DavidKBD - Purgatory Pack - MiniLoop 01.ogg-2240222f1b4a7640d1a5a0547f8fec1a.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/music/purgatory/vol1/09 - DavidKBD - Purgatory Pack - MiniLoop 01.ogg"
+dest_files=["res://.godot/imported/09 - DavidKBD - Purgatory Pack - MiniLoop 01.ogg-2240222f1b4a7640d1a5a0547f8fec1a.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

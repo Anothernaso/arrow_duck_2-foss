@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://ckum100t7knj4"]
+
+[ext_resource type="Script" uid="uid://cpmoa1603jyl1" path="res://globals/game_state_manager/game_state_manager.gd" id="1_0tlvk"]
+[ext_resource type="Resource" uid="uid://biv4qjgu23bko" path="res://content/game_states.tres" id="2_eh2t2"]
+
+[node name="GameStateManager" type="Node" unique_id=2084264654]
+script = ExtResource("1_0tlvk")
+_states = ExtResource("2_eh2t2")

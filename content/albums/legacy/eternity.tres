@@ -8,7 +8,7 @@
 [ext_resource type="AudioStream" uid="uid://bi7qun0sy8mgb" path="res://audio/music/eternity/DavidKBD - Eternity Pack - 06 - God of darkness - oneshoot.ogg" id="6_lh4kp"]
 [ext_resource type="AudioStream" uid="uid://7jhj8fpvalab" path="res://audio/music/eternity/DavidKBD - Eternity Pack - 07 - Suffocation - oneshoot.ogg" id="7_22pto"]
 [ext_resource type="AudioStream" uid="uid://tcd8ku0wc1f2" path="res://audio/music/eternity/DavidKBD - Eternity Pack - 08 - While We Sleep - oneshoot.ogg" id="8_d37u3"]
-[ext_resource type="Script" uid="uid://cs03dqqwe63jw" path="res://scripts/music_registry.gd" id="9_vhm38"]
+[ext_resource type="Script" uid="uid://cs03dqqwe63jw" path="res://scripts/legacy/music_registry.gd" id="9_vhm38"]
 
 [resource]
 script = ExtResource("9_vhm38")

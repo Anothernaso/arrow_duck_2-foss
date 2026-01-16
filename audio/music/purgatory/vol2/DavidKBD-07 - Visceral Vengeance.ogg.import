@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://ccjijppk21v3w"
+path="res://.godot/imported/DavidKBD-07 - Visceral Vengeance.ogg-3d95d06bc83932b363fe15789c189f27.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/music/purgatory/vol2/DavidKBD-07 - Visceral Vengeance.ogg"
+dest_files=["res://.godot/imported/DavidKBD-07 - Visceral Vengeance.ogg-3d95d06bc83932b363fe15789c189f27.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

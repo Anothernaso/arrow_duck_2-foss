@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://lgpl40m4r1b2"]
+
+[node name="Dummy" type="Node" unique_id=1756510273]
+process_mode = 4
+
+[node name="Process is disabled on this node!" type="Node" parent="." unique_id=168270423]
