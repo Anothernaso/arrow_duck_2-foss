@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://pgiicv4uwcag"]
 
 [ext_resource type="Script" uid="uid://ds0u0fa6xqm6i" path="res://nodes/player/player_character.gd" id="1_hs8q7"]
+[ext_resource type="PackedScene" uid="uid://og8gtwjilg15" path="res://nodes/sfx_player/sfx_player.tscn" id="2_woof4"]
 [ext_resource type="Texture2D" uid="uid://ghpw681ojcra" path="res://textures/duck.png" id="2_ysjql"]
+[ext_resource type="AudioStream" uid="uid://cl10ypfxfehmx" path="res://audio/effects/duck_death.ogg" id="3_tc34i"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_amjri"]
 size = Vector2(50, 50)
@@ -14,6 +16,8 @@ default_font_size = 35
 
 [node name="PlayerCharacter" type="CharacterBody2D" unique_id=194471568]
 script = ExtResource("1_hs8q7")
+sfx_player_scene = ExtResource("2_woof4")
+death_sfx = ExtResource("3_tc34i")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=956746031]
 shape = SubResource("RectangleShape2D_amjri")

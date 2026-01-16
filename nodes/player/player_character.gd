@@ -3,6 +3,8 @@ extends CharacterBody2D
 class_name PlayerCharacter
 
 @export var speed = 300.0
+@export var sfx_player_scene: PackedScene
+@export var death_sfx: AudioStream
 
 var is_down: bool = false
 var is_up: bool = false
@@ -48,6 +50,11 @@ func _on_area_2d_body_entered(_body: Node2D) -> void:
 	printerr("💀🦆 You ducked up!! 🦆💀")
 	
 	ScoreCounter.update_highscore()
+	
+	var sfx_player := sfx_player_scene.instantiate() as AudioStreamPlayer
+	sfx_player.stream = death_sfx
+	get_tree().root.add_child(sfx_player)
+	
 	GameStateManager.set_state(GameStates.State.DeathScreen)
 	
 
