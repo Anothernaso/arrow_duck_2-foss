@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://cmdhhiu7aw3ny" path="res://scripts/arrow/arrow_sequence.gd" id="1_bn7jg"]
 [ext_resource type="PackedScene" uid="uid://04atsbtlul2t" path="res://content/arrows/arrow_fast.tscn" id="2_w663g"]
 [ext_resource type="Script" uid="uid://ysy7kt8civ23" path="res://scripts/arrow/arrow_timeline.gd" id="3_6ve67"]
+[ext_resource type="PackedScene" uid="uid://mywnkf0af500" path="res://content/arrows/arrow_basic.tscn" id="3_dvq8x"]
+[ext_resource type="PackedScene" uid="uid://bax2g7hqv7ce4" path="res://content/arrows/arrow_fire.tscn" id="3_w663g"]
 
 [sub_resource type="Resource" id="Resource_qmhvi"]
 script = ExtResource("1_bn7jg")
@@ -34,8 +36,67 @@ min_survival_time = 25
 scene = ExtResource("2_w663g")
 metadata/_custom_type_script = "uid://cmdhhiu7aw3ny"
 
+[sub_resource type="Resource" id="Resource_8ifpl"]
+script = ExtResource("1_bn7jg")
+min_survival_time = 30
+scene = ExtResource("3_dvq8x")
+metadata/_custom_type_script = "uid://cmdhhiu7aw3ny"
+
+[sub_resource type="Resource" id="Resource_sqhr0"]
+script = ExtResource("1_bn7jg")
+min_survival_time = 30
+scene = ExtResource("3_dvq8x")
+metadata/_custom_type_script = "uid://cmdhhiu7aw3ny"
+
+[sub_resource type="Resource" id="Resource_lp1o3"]
+script = ExtResource("1_bn7jg")
+min_survival_time = 73
+scene = ExtResource("3_dvq8x")
+metadata/_custom_type_script = "uid://cmdhhiu7aw3ny"
+
+[sub_resource type="Resource" id="Resource_rx6gw"]
+script = ExtResource("1_bn7jg")
+min_survival_time = 73
+scene = ExtResource("3_dvq8x")
+metadata/_custom_type_script = "uid://cmdhhiu7aw3ny"
+
+[sub_resource type="Resource" id="Resource_6ve67"]
+script = ExtResource("1_bn7jg")
+min_survival_time = 10
+max_survival_time = 11
+scene = ExtResource("3_w663g")
+metadata/_custom_type_script = "uid://cmdhhiu7aw3ny"
+
+[sub_resource type="Resource" id="Resource_dvq8x"]
+script = ExtResource("1_bn7jg")
+min_survival_time = 20
+max_survival_time = 22
+scene = ExtResource("3_w663g")
+metadata/_custom_type_script = "uid://cmdhhiu7aw3ny"
+
+[sub_resource type="Resource" id="Resource_xeki2"]
+script = ExtResource("1_bn7jg")
+min_survival_time = 40
+max_survival_time = 43
+scene = ExtResource("3_w663g")
+metadata/_custom_type_script = "uid://cmdhhiu7aw3ny"
+
+[sub_resource type="Resource" id="Resource_sc4oa"]
+script = ExtResource("1_bn7jg")
+min_survival_time = 70
+max_survival_time = 73
+scene = ExtResource("3_w663g")
+metadata/_custom_type_script = "uid://cmdhhiu7aw3ny"
+
+[sub_resource type="Resource" id="Resource_kmpup"]
+script = ExtResource("1_bn7jg")
+min_survival_time = 90
+max_survival_time = 4
+scene = ExtResource("3_w663g")
+metadata/_custom_type_script = "uid://cmdhhiu7aw3ny"
+
 [resource]
 script = ExtResource("3_6ve67")
 start_time = 20.0
-registry = Array[ExtResource("1_bn7jg")]([SubResource("Resource_qmhvi"), SubResource("Resource_gcg2e"), SubResource("Resource_cl6f5"), SubResource("Resource_bn7jg"), SubResource("Resource_w663g")])
+registry = Array[ExtResource("1_bn7jg")]([SubResource("Resource_qmhvi"), SubResource("Resource_gcg2e"), SubResource("Resource_cl6f5"), SubResource("Resource_bn7jg"), SubResource("Resource_w663g"), SubResource("Resource_8ifpl"), SubResource("Resource_sqhr0"), SubResource("Resource_lp1o3"), SubResource("Resource_rx6gw"), SubResource("Resource_6ve67"), SubResource("Resource_dvq8x"), SubResource("Resource_xeki2"), SubResource("Resource_sc4oa"), SubResource("Resource_kmpup")])
 metadata/_custom_type_script = "uid://ysy7kt8civ23"

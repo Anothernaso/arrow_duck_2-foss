@@ -5,6 +5,7 @@
 [node name="MusicManager" type="Node" unique_id=1552190545]
 script = ExtResource("1_ae4ak")
 _volume = -12.0
+_low_volume = -80.0
 _fade_time = 2.5
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=12255203]
