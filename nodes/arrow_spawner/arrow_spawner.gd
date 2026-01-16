@@ -95,20 +95,6 @@ func spawn_random() -> void:
 		arrow_node.global_position = spawn_pos
 		arrow_holder.add_child.call_deferred(arrow_node)
 		
-		Pooler.singleton.dispool_node(
-			arrow.scene,
-			arrow_holder,
-			func(a: ArrowBase):
-				
-				if !a: return
-				
-				var spawn_position := Vector2Utils.randv2_range(
-					min_spawn_point,
-					max_spawn_point,
-				)
-				a.global_position = spawn_position
-		)
-		
 	
 
 ## Saves what timeline we are currently in.

@@ -6,14 +6,10 @@ extends CharacterBody2D
 @export var shape: Shape2D
 @export var texture: Texture
 
-@onready var has_enpooled: bool
+var collider: CollisionShape2D
+var sprite: Sprite2D
 
-@onready var collider: CollisionShape2D
-@onready var sprite: Sprite2D
-
-func _enter_tree() -> void:
-	has_enpooled = false
-	
+func _ready() -> void:
 	collider = CollisionShape2D.new()
 	sprite = Sprite2D.new()
 	
@@ -24,23 +20,9 @@ func _enter_tree() -> void:
 	add_child.call_deferred(sprite)
 	
 
-func _exit_tree() -> void:
-	if collider:
-		collider.free()
-	if sprite:
-		sprite.free()
-	
-
-func _notification(what: int) -> void:
-	if what == NOTIFICATION_PREDELETE && Pooler.singleton:
-		Pooler.singleton.report_free(self)
-		
-	
-
 func _physics_process(_delta: float) -> void:
-	if global_position.x < ArrowSpawner.min_destruction_point.x && !has_enpooled:
-		has_enpooled = true
-		Pooler.singleton.enpool_node(self)
+	if global_position.x < ArrowSpawner.min_destruction_point.x:
+		queue_free()
 	
 	velocity.x = -speed
 	velocity.y = 0

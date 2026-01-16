@@ -5,17 +5,11 @@
 [ext_resource type="PackedScene" uid="uid://c1j8p0dxi0l7b" path="res://scenes/game/game.tscn" id="2_e4hyi"]
 [ext_resource type="PackedScene" uid="uid://dqqhbyuyyj1si" path="res://scenes/death_screen/death_screen.tscn" id="3_evw1p"]
 [ext_resource type="PackedScene" uid="uid://bup3qkf8uwv5k" path="res://scenes/main_menu/main_menu.tscn" id="4_lgj4t"]
-[ext_resource type="PackedScene" uid="uid://c5uqtv8wu0kud" path="res://nodes/utils/scheduler/scheduler.tscn" id="5_l8v81"]
-[ext_resource type="PackedScene" uid="uid://cib1w6c5wa2eq" path="res://nodes/utils/pooler/pooler.tscn" id="6_vyht1"]
 
 [node name="Root" type="Node" unique_id=896492155]
 script = ExtResource("1_ifjjg")
 game_scene = ExtResource("2_e4hyi")
 death_screen_scene = ExtResource("3_evw1p")
 main_menu_scene = ExtResource("4_lgj4t")
-
-[node name="Scheduler" parent="." unique_id=268562393 instance=ExtResource("5_l8v81")]
-
-[node name="Pooler" parent="." unique_id=295166021 instance=ExtResource("6_vyht1")]
 
 [node name="Music" parent="." unique_id=619634676 instance=ExtResource("1_8sih3")]

@@ -1,6 +1,6 @@
 extends Sprite2D
 
-func _enter_tree() -> void:
+func _ready() -> void:
 	var zi: int
 	match randi_range(0, 4):
 		0:

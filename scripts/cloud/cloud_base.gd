@@ -9,11 +9,7 @@ extends CharacterBody2D
 
 @onready var speed: float
 
-@onready var has_enpooled: bool
-
-func _enter_tree() -> void:
-	has_enpooled = false
-	
+func _ready() -> void:
 	scale = Vector2Utils.randv2_range(
 		Vector2(
 			min_scale,
@@ -28,16 +24,9 @@ func _enter_tree() -> void:
 	speed = randf_range(min_speed, max_speed)
 	
 
-func _notification(what: int) -> void:
-	if what == NOTIFICATION_PREDELETE && Pooler.singleton:
-		Pooler.singleton.report_free(self)
-		
-	
-
 func _physics_process(_delta: float) -> void:
-	if global_position.x < CloudSpawner.singleton.min_despawn_point.global_position.x && !has_enpooled:
-		has_enpooled = true
-		Pooler.singleton.enpool_node(self)
+	if global_position.x < CloudSpawner.singleton.min_despawn_point.global_position.x:
+		queue_free()
 	
 	velocity.x = -speed
 	velocity.y = 0

@@ -74,7 +74,7 @@ offset_right = 64.0
 offset_bottom = 37.0
 grow_horizontal = 2
 theme = ExtResource("2_gpfue")
-text = "💀🦆You ducked up!!🦆💀"
+text = "💀🦆 You ducked up!! 🦆💀"
 horizontal_alignment = 1
 
 [node name="Score" type="Label" parent="UI/Control/Panel" unique_id=1281114059]
