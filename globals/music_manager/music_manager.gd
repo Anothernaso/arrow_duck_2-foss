@@ -8,7 +8,7 @@ extends Node
 @onready var _audio_player: AudioStreamPlayer = $AudioStreamPlayer
 var _current_album: MusicAlbum
 
-var fading_out: bool
+var _fading_out: bool
 
 func _ready() -> void:
 	_audio_player.volume_db = _low_volume
@@ -36,14 +36,16 @@ func _fade_out() -> void:
 	var tween := create_tween()
 	tween.tween_property(_audio_player, "volume_db", _low_volume, _fade_time)
 	tween.finished.connect(func() -> void:
-		_audio_player.stop()
-		fading_out = false
+		_audio_player.stop() # This does not trigger `finished` signal
+		_fading_out = false
+		
+		play_random()
 	)
 
 
 # Fade out the current track when it is about to end
 func _process(_delta: float) -> void:
-	if !_audio_player.playing || fading_out:
+	if !_audio_player.playing || _fading_out:
 		return
 		
 	
@@ -51,7 +53,7 @@ func _process(_delta: float) -> void:
 	var pos := _audio_player.get_playback_position()
 	
 	if length - pos <= _fade_time:
-		fading_out = true
+		_fading_out = true
 		_fade_out()
 	
 
