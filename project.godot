@@ -54,6 +54,7 @@ cloud="A group for all clouds."
 arrow="A group for all arrows"
 lethal="A group for all things that should kill the player on impact."
 projectile="A group for all projectiles. Note that arrows are not projectiles."
+kill_offscreen="Bodies in this group will be killed upon exiting the `screen_area` node."
 
 [input]
 
@@ -81,6 +82,7 @@ right={
 [layer_names]
 
 2d_physics/layer_2="lethal"
+2d_physics/layer_3="kill_offscreen"
 
 [physics]
 

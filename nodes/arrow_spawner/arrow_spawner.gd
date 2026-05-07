@@ -5,15 +5,15 @@ static var singleton: ArrowSpawner
 
 @export var min_spawn_point_node: Node2D
 @export var max_spawn_point_node: Node2D
-@export var min_destruction_point_node: Node2D
 
 static var min_spawn_point: Vector2
 static var max_spawn_point: Vector2
-static var min_destruction_point: Vector2
 
 ## I don't even know what this does.
 ## It doesn't seem to have any usages.
 ## I probably stopped using it when I added the ScoreCounter back in 2024.
+## 
+## I should search through the codebase using `ripgrep` some day.
 ##
 ## - Anatnaso
 ##
@@ -42,7 +42,6 @@ func restart_current_timeline() -> void:
 func initialize() -> void:
 	min_spawn_point = min_spawn_point_node.global_position
 	max_spawn_point = max_spawn_point_node.global_position
-	min_destruction_point = min_destruction_point_node.global_position
 	
 	TimeTicker.singleton.on_tick.connect(time_tick)
 	

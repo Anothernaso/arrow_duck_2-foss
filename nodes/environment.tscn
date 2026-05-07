@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cede15oabb50b" path="res://nodes/cloud_spawner/cloud_spawner.tscn" id="5_wpn1q"]
 [ext_resource type="Resource" uid="uid://8thpwy4kgorg" path="res://content/cloud_registry.tres" id="6_4r44i"]
 [ext_resource type="PackedScene" uid="uid://bi1p1sul5tdrj" path="res://nodes/player/player_camera.tscn" id="6_nop3y"]
-[ext_resource type="PackedScene" uid="uid://bdy6byeyrthxp" path="res://nodes/projectile_zone/projectile_zone.tscn" id="7_xdrux"]
+[ext_resource type="PackedScene" uid="uid://ccsjf3h4r18cp" path="res://nodes/screen_area/screen_area.tscn" id="8_xdrux"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xdrux"]
 size = Vector2(1152, 648)
@@ -19,10 +19,9 @@ size = Vector2(1152, 648)
 
 [node name="PlayerCharacter" parent="." unique_id=1176646513 instance=ExtResource("2_68qd2")]
 
-[node name="ArrowSpawner" parent="." unique_id=276560459 node_paths=PackedStringArray("min_spawn_point_node", "max_spawn_point_node", "min_destruction_point_node") instance=ExtResource("3_xybn2")]
+[node name="ArrowSpawner" parent="." unique_id=276560459 node_paths=PackedStringArray("min_spawn_point_node", "max_spawn_point_node") instance=ExtResource("3_xybn2")]
 min_spawn_point_node = NodePath("SpawnMin")
 max_spawn_point_node = NodePath("SpawnMax")
-min_destruction_point_node = NodePath("DespawnMin")
 timeline_registry = ExtResource("4_o3b4p")
 
 [node name="SpawnMin" type="Node2D" parent="ArrowSpawner" unique_id=395373358]
@@ -30,9 +29,6 @@ position = Vector2(700, -327)
 
 [node name="SpawnMax" type="Node2D" parent="ArrowSpawner" unique_id=727008278]
 position = Vector2(700, 329)
-
-[node name="DespawnMin" type="Node2D" parent="ArrowSpawner" unique_id=2146093031]
-position = Vector2(-692, 0)
 
 [node name="CloudSpawner" parent="." unique_id=525504888 node_paths=PackedStringArray("min_spawn_point", "max_spawn_point", "min_despawn_point") instance=ExtResource("5_wpn1q")]
 cloud_registry = ExtResource("6_4r44i")
@@ -43,35 +39,35 @@ min_despawn_point = NodePath("SpawnMin2")
 [node name="SpawnMin" type="Node2D" parent="CloudSpawner" unique_id=2053402638]
 position = Vector2(1482, -327)
 
-[node name="SpawnMax" type="Node2D" parent="CloudSpawner" unique_id=2061323418]
-position = Vector2(1482, 329)
-
 [node name="SpawnMin2" type="Node2D" parent="CloudSpawner" unique_id=973463052]
 position = Vector2(-1332, 0)
 
-[node name="ProjectileZone" parent="." unique_id=427029415 instance=ExtResource("7_xdrux")]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ProjectileZone" unique_id=755766710]
-shape = SubResource("RectangleShape2D_xdrux")
+[node name="SpawnMax" type="Node2D" parent="CloudSpawner" unique_id=2061323418]
+position = Vector2(1482, 329)
 
 [node name="Bounds" type="Node2D" parent="." unique_id=331395043]
 
-[node name="Bounds top" parent="Bounds" unique_id=1977364124 instance=ExtResource("5_622bm")]
+[node name="Up" parent="Bounds" unique_id=1977364124 instance=ExtResource("5_622bm")]
 position = Vector2(0, -350)
 scale = Vector2(23.36, 1)
 
-[node name="Bounds bottom" parent="Bounds" unique_id=1250596278 instance=ExtResource("5_622bm")]
+[node name="Left" parent="Bounds" unique_id=782956776 instance=ExtResource("5_622bm")]
+position = Vector2(-315.00003, 0)
+rotation = 1.5708
+scale = Vector2(23.36, 1)
+
+[node name="Down" parent="Bounds" unique_id=1250596278 instance=ExtResource("5_622bm")]
 position = Vector2(0, 351)
 scale = Vector2(23.36, 1)
 
-[node name="Bounds left" parent="Bounds" unique_id=782956776 instance=ExtResource("5_622bm")]
-position = Vector2(-315, -1.36069e-12)
-rotation = 1.5708
-scale = Vector2(23.36, 1)
-
-[node name="Bounds right" parent="Bounds" unique_id=1119782761 instance=ExtResource("5_622bm")]
+[node name="Right" parent="Bounds" unique_id=1119782761 instance=ExtResource("5_622bm")]
 position = Vector2(211, 1)
 rotation = 1.5708
 scale = Vector2(23.36, 1)
+
+[node name="ScreenArea" parent="." unique_id=981812311 instance=ExtResource("8_xdrux")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ScreenArea" unique_id=755766710]
+shape = SubResource("RectangleShape2D_xdrux")
 
 [node name="PlayerCamera" parent="." unique_id=332213508 instance=ExtResource("6_nop3y")]

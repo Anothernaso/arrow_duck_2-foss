@@ -20,8 +20,8 @@ height = 15
 noise = SubResource("FastNoiseLite_bas4a")
 color_ramp = SubResource("Gradient_iwmb5")
 
-[node name="Shrapnel" type="CharacterBody2D" unique_id=1718685271 groups=["lethal", "projectile"]]
-collision_layer = 2
+[node name="Shrapnel" type="CharacterBody2D" unique_id=1718685271 groups=["kill_offscreen", "lethal", "projectile"]]
+collision_layer = 6
 collision_mask = 0
 script = ExtResource("1_b552p")
 speed = 250.0

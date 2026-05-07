@@ -12,8 +12,12 @@ extends CharacterBody2D
 var direction: Vector2
 
 func _ready() -> void:
-	if !is_in_group("projectile"): add_to_group("projectile")
-	if !is_in_group("lethal"): add_to_group("lethal")
+	add_to_group("projectile")
+	add_to_group("lethal")
+	add_to_group("kill_offscreen")
+	
+	# Add the body to the `kill_offscreen` layer
+	set_collision_layer_value(3, true)
 	
 	collider = CollisionShape2D.new()
 	sprite = Sprite2D.new()

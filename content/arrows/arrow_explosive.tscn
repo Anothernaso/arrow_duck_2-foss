@@ -28,7 +28,7 @@ color_ramp = SubResource("Gradient_bme1q")
 radius = 100.0
 
 [node name="ArrowExplosive" type="CharacterBody2D" unique_id=1076627646 groups=["arrow", "lethal"]]
-collision_layer = 2
+collision_layer = 6
 collision_mask = 0
 script = ExtResource("1_bme1q")
 shape = SubResource("RectangleShape2D_bme1q")

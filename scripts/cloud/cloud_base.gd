@@ -10,7 +10,11 @@ extends CharacterBody2D
 @onready var speed: float
 
 func _ready() -> void:
-	if !is_in_group("cloud"): add_to_group("cloud")
+	add_to_group("cloud")
+	add_to_group("kill_offscreen")
+	
+	# Add the body to the `kill_offscreen` layer
+	set_collision_layer_value(3, true)
 	
 	scale = Vector2Utils.randv2_range(
 		Vector2(
@@ -27,9 +31,6 @@ func _ready() -> void:
 	
 
 func _physics_process(_delta: float) -> void:
-	if global_position.x < CloudSpawner.singleton.min_despawn_point.global_position.x:
-		queue_free()
-	
 	velocity.x = -speed
 	velocity.y = 0
 	

@@ -6,7 +6,6 @@ static var singleton: CloudSpawner
 @export var cloud_registry: CloudRegistry
 @export var min_spawn_point: Node2D
 @export var max_spawn_point: Node2D
-@export var min_despawn_point: Node2D 
 
 @onready var cloud_holder: Node2D = $CloudHolder
 

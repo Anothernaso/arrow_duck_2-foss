@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://ccsjf3h4r18cp"]
+
+[ext_resource type="Script" uid="uid://c0ux5evhwg8ax" path="res://nodes/screen_area/screen_area.gd" id="1_73h00"]
+
+[node name="ScreenArea" type="Area2D" unique_id=981812311]
+collision_layer = 0
+collision_mask = 4
+script = ExtResource("1_73h00")
+
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

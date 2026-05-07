@@ -10,8 +10,12 @@ extends CharacterBody2D
 @onready var sprite: Sprite2D
 
 func _ready() -> void:
-	if !is_in_group("arrow"): add_to_group("arrow")
-	if !is_in_group("lethal"): add_to_group("lethal")
+	add_to_group("arrow")
+	add_to_group("lethal")
+	add_to_group("kill_offscreen")
+	
+	# Add the body to the `kill_offscreen` layer
+	set_collision_layer_value(3, true)
 	
 	collider = CollisionShape2D.new()
 	sprite = Sprite2D.new()
@@ -24,9 +28,6 @@ func _ready() -> void:
 	
 
 func _physics_process(_delta: float) -> void:
-	if global_position.x < ArrowSpawner.min_destruction_point.x:
-		queue_free()
-	
 	velocity.x = -speed
 	velocity.y = 0
 	
