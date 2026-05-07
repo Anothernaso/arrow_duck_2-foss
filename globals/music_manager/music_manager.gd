@@ -79,7 +79,3 @@ func play_random() -> void:
 	var stream := ArrayUtils.get_random_element(_current_album.streams) as AudioStream
 	play_stream(stream)
 	
-
-func _on_audio_stream_player_finished() -> void:
-	play_random()
-	

@@ -10,5 +10,3 @@ _fade_time = 2.5
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=12255203]
 playback_type = 1
-
-[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]
