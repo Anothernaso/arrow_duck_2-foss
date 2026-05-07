@@ -2,13 +2,13 @@ class_name FormatUtils
 
 # Fancy time formatter that produces readable timestamps
 static func format_time(seconds: float) -> String:
-	var total_seconds = int(seconds + 0.5)
+	var total_seconds := int(seconds + 0.5)
 	
-	var hours = total_seconds / 3600
-	var minutes = (total_seconds % 3600) / 60
-	var remaining_seconds = total_seconds % 60
+	var hours := total_seconds / 3600
+	var minutes := (total_seconds % 3600) / 60
+	var remaining_seconds := total_seconds % 60
 
-	var time_str = ""
+	var time_str := ""
 	
 	if hours > 0:
 		time_str += str(hours) + "h "

@@ -1,3 +1,4 @@
+class_name AD_MusicManager
 extends Node
 
 @export var _volume: float
@@ -13,8 +14,8 @@ func _ready() -> void:
 	_audio_player.volume_db = _low_volume
 	
 
-func _transition_to(stream: AudioStream):
-	var fade_in :=  func():
+func _transition_to(stream: AudioStream) -> void:
+	var fade_in :=  func() -> void:
 		_audio_player.stream = stream
 		_audio_player.play()
 
@@ -31,17 +32,17 @@ func _transition_to(stream: AudioStream):
 		fade_in.call()
 	
 
-func _fade_out():
+func _fade_out() -> void:
 	var tween := create_tween()
 	tween.tween_property(_audio_player, "volume_db", _low_volume, _fade_time)
-	tween.finished.connect(func():
+	tween.finished.connect(func() -> void:
 		_audio_player.stop()
 		fading_out = false
 	)
 
 
 # Fade out the current track when it is about to end
-func _process(_delta):
+func _process(_delta: float) -> void:
 	if !_audio_player.playing || fading_out:
 		return
 		

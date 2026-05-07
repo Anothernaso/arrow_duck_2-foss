@@ -1,3 +1,4 @@
+class_name AD_GameStateManager
 extends Node
 
 @export var _states: GameStates

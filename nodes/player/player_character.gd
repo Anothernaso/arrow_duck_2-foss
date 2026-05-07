@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 class_name PlayerCharacter
 
-@export var speed = 300.0
+@export var speed: float = 300.0
 @export var sfx_player_scene: PackedScene
 @export var death_sfx: AudioStream
 
@@ -57,7 +57,8 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	sfx_player.stream = death_sfx
 	get_tree().root.add_child(sfx_player)
 	
-	GameStateManager.set_state(GameStates.State.DeathScreen)
+	var game_state_manager: AD_GameStateManager = AD_GlobalGameStateManager
+	game_state_manager.set_state(GameStates.State.DeathScreen)
 	
 
 

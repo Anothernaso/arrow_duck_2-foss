@@ -32,6 +32,34 @@ offset_bottom = -162.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="Title" type="Label" parent="UI/Control/Panel" unique_id=167173367]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -296.5
+offset_top = 14.0
+offset_right = 296.5
+offset_bottom = 77.0
+grow_horizontal = 2
+theme = ExtResource("2_gpfue")
+text = "💀🦆 You ducked up!! 🦆💀"
+horizontal_alignment = 1
+
+[node name="ScoreCounter" type="Label" parent="UI/Control/Panel" unique_id=1281114059]
+layout_mode = 0
+offset_top = 94.0
+offset_right = 181.0
+offset_bottom = 117.0
+text = "Time survived: 00m 00s"
+
+[node name="HighscoreCounter" type="Label" parent="UI/Control/Panel" unique_id=35665994]
+layout_mode = 0
+offset_top = 117.0
+offset_right = 181.0
+offset_bottom = 140.0
+text = "Highscore: 00m 00s"
+
 [node name="MainMenuButton" type="Button" parent="UI/Control/Panel" unique_id=1107918992]
 layout_mode = 1
 anchors_preset = 7
@@ -45,9 +73,9 @@ offset_right = -8.0
 offset_bottom = -15.0
 grow_horizontal = 2
 grow_vertical = 0
-text = "Back to duck menu"
+text = "Back to Duck Menu"
 
-[node name="Try again" type="Button" parent="UI/Control/Panel" unique_id=500844113]
+[node name="RetryButton" type="Button" parent="UI/Control/Panel" unique_id=500844113]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -60,36 +88,8 @@ offset_right = 168.0
 offset_bottom = -15.0
 grow_horizontal = 2
 grow_vertical = 0
-text = "Duck again
+text = "Duck Again
 "
-
-[node name="Title" type="Label" parent="UI/Control/Panel" unique_id=167173367]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -64.0
-offset_top = 14.0
-offset_right = 64.0
-offset_bottom = 37.0
-grow_horizontal = 2
-theme = ExtResource("2_gpfue")
-text = "💀🦆 You ducked up!! 🦆💀"
-horizontal_alignment = 1
-
-[node name="Score" type="Label" parent="UI/Control/Panel" unique_id=1281114059]
-layout_mode = 0
-offset_top = 94.0
-offset_right = 40.0
-offset_bottom = 117.0
-text = "Time survived: 00m 00s"
-
-[node name="Highscore" type="Label" parent="UI/Control/Panel" unique_id=35665994]
-layout_mode = 0
-offset_top = 117.0
-offset_right = 181.0
-offset_bottom = 140.0
-text = "High score: 00m 00s"
 
 [node name="Env" type="Node2D" parent="." unique_id=1117941202]
 
@@ -98,4 +98,4 @@ text = "High score: 00m 00s"
 [node name="PlayerCamera" parent="Env" unique_id=2141972906 instance=ExtResource("3_cnyqg")]
 
 [connection signal="button_down" from="UI/Control/Panel/MainMenuButton" to="." method="_on_main_menu_button_button_down"]
-[connection signal="button_down" from="UI/Control/Panel/Try again" to="." method="_on_try_again_button_down"]
+[connection signal="button_down" from="UI/Control/Panel/RetryButton" to="." method="_on_try_again_button_down"]

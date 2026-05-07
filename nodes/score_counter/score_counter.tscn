@@ -16,28 +16,28 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="Counter" type="Label" parent="CanvasLayer/Control" unique_id=1115583404]
+[node name="ScoreCounter" type="Label" parent="CanvasLayer/Control" unique_id=1115583404]
 layout_mode = 1
 offset_top = 32.0
 offset_right = 181.0
 offset_bottom = 55.0
 text = "Time survived: 00m 00s"
 
-[node name="HighScore" type="Label" parent="CanvasLayer/Control" unique_id=899052595]
+[node name="HighscoreCounter" type="Label" parent="CanvasLayer/Control" unique_id=899052595]
 layout_mode = 0
 offset_top = 55.0
 offset_right = 181.0
 offset_bottom = 78.0
 text = "Highscore: 00m 00s"
 
-[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer/Control" unique_id=901002917]
+[node name="LevelProgressBar" type="ProgressBar" parent="CanvasLayer/Control" unique_id=901002917]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
 offset_bottom = 27.0
 grow_horizontal = 2
 
-[node name="ProgressInfo" type="Label" parent="CanvasLayer/Control" unique_id=57698906]
+[node name="LevelProgressInfo" type="Label" parent="CanvasLayer/Control" unique_id=57698906]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5

@@ -26,8 +26,17 @@ driver/driver="PipeWire"
 
 [autoload]
 
-GameStateManager="*uid://ckum100t7knj4"
-MusicManager="*uid://bd1elsjt3hwrq"
+AD_GlobalGameStateManager="*uid://ckum100t7knj4"
+AD_GlobalMusicManager="*uid://bd1elsjt3hwrq"
+
+[debug]
+
+gdscript/warnings/untyped_declaration=2
+gdscript/warnings/unsafe_property_access=2
+gdscript/warnings/unsafe_method_access=2
+gdscript/warnings/unsafe_call_argument=2
+gdscript/warnings/unsafe_void_return=2
+gdscript/warnings/missing_await=2
 
 [display]
 
