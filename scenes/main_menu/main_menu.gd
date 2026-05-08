@@ -10,12 +10,12 @@ func _ready() -> void:
 	music_manager.set_album(album, true)
 	
 
-func _on_quit_button_down() -> void:
-	get_tree().quit()
-
 func _on_start_button_down() -> void:
 	var game_state_manager: AD_GameStateManager = AD_GlobalGameStateManager
 	game_state_manager.set_state(GameStates.State.InGame)
+
+func _on_quit_button_down() -> void:
+	get_tree().quit()
 
 func _on_delete_data_button_down() -> void:
 	print("Deleting all saved data!")

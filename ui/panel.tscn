@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://dq8m1un7enhgx"]
+
+[ext_resource type="Theme" uid="uid://b4knt16xuynoj" path="res://ui/themes/arrow_duck_2_theme.tres" id="1_ooku7"]
+
+[node name="Panel" type="Panel" unique_id=2070056285]
+custom_minimum_size = Vector2(576, 324)
+offset_right = 576.0
+offset_bottom = 324.0
+theme = ExtResource("1_ooku7")
