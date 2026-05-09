@@ -7,7 +7,7 @@ class_name MainMenu
 
 func _ready() -> void:
 	var music_manager: AD_MusicManager = AD_GlobalMusicManager
-	music_manager.set_album(album, true)
+	music_manager.set_album(album, AD_MusicManager.ForcePlayMode.IfChanged)
 	
 
 func _on_start_button_down() -> void:

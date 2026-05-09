@@ -1,6 +1,12 @@
 class_name AD_MusicManager
 extends Node
 
+enum ForcePlayMode {
+	Never,
+	IfChanged,
+	Always,
+}
+
 @export var _volume: float
 @export var _low_volume: float
 @export var _fade_time: float
@@ -63,13 +69,20 @@ func play_stream(stream: AudioStream) -> void:
 	_transition_to(stream)
 	
 
-func set_album(album: MusicAlbum, force_play: bool = false) -> void:
-	print("Changing album to: ", album.resource_path)
-	
+func set_album(album: MusicAlbum, force_play_mode: ForcePlayMode = ForcePlayMode.Never) -> void:
+	var last_album := _current_album
 	_current_album = album
 	
-	if !_audio_player.playing || force_play:
+	var force_play := func () -> void:
+		print("Changing album to: ", album.resource_path)
 		play_random()
+	
+	if !_audio_player.playing:
+		force_play.call()
+	elif force_play_mode == ForcePlayMode.Always:
+		force_play.call()
+	elif force_play_mode == ForcePlayMode.IfChanged && _current_album != last_album:
+		force_play.call()
 		
 	
 
