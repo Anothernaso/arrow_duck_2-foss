@@ -50,16 +50,16 @@ dragger_visibility = 1
 layout_mode = 2
 text = "Arrow Duck 2!!"
 
-[node name="VBoxContainer" type="VBoxContainer" parent="UI/Control/CenterContainer/Panel/VSplitContainer" unique_id=526265485]
+[node name="ButtonContainer" type="VBoxContainer" parent="UI/Control/CenterContainer/Panel/VSplitContainer" unique_id=526265485]
 layout_mode = 2
 theme = ExtResource("1_mgyuc")
 alignment = 2
 
-[node name="StartButton" parent="UI/Control/CenterContainer/Panel/VSplitContainer/VBoxContainer" unique_id=642408839 instance=ExtResource("4_3ovsr")]
+[node name="StartButton" parent="UI/Control/CenterContainer/Panel/VSplitContainer/ButtonContainer" unique_id=642408839 instance=ExtResource("4_3ovsr")]
 layout_mode = 2
 text = "Become a Duck"
 
-[node name="QuitButton" parent="UI/Control/CenterContainer/Panel/VSplitContainer/VBoxContainer" unique_id=593121669 instance=ExtResource("4_3ovsr")]
+[node name="QuitButton" parent="UI/Control/CenterContainer/Panel/VSplitContainer/ButtonContainer" unique_id=593121669 instance=ExtResource("4_3ovsr")]
 layout_mode = 2
 text = "Duck Off"
 
@@ -80,6 +80,6 @@ text = "Delete All Saved Data"
 
 [node name="PlayerCamera" parent="Env" unique_id=499102077 instance=ExtResource("2_756rb")]
 
-[connection signal="button_down" from="UI/Control/CenterContainer/Panel/VSplitContainer/VBoxContainer/StartButton" to="." method="_on_start_button_down"]
-[connection signal="button_down" from="UI/Control/CenterContainer/Panel/VSplitContainer/VBoxContainer/QuitButton" to="." method="_on_quit_button_down"]
+[connection signal="button_down" from="UI/Control/CenterContainer/Panel/VSplitContainer/ButtonContainer/StartButton" to="." method="_on_start_button_down"]
+[connection signal="button_down" from="UI/Control/CenterContainer/Panel/VSplitContainer/ButtonContainer/QuitButton" to="." method="_on_quit_button_down"]
 [connection signal="button_down" from="UI/Control/DeleteDataButton" to="." method="_on_delete_data_button_down"]

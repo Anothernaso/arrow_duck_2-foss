@@ -2,9 +2,12 @@
 
 [ext_resource type="Script" uid="uid://cbnstocroycpv" path="res://scenes/death_screen/death_screen.gd" id="1_w8h0d"]
 [ext_resource type="PackedScene" uid="uid://bg8ahamfcwj3i" path="res://nodes/background.tscn" id="2_eu6q6"]
-[ext_resource type="Theme" uid="uid://b4knt16xuynoj" path="res://ui/themes/arrow_duck_2_theme.tres" id="2_gpfue"]
 [ext_resource type="Resource" uid="uid://dhwjuh6b6sghl" path="res://content/albums/eternity.tres" id="2_ulujf"]
 [ext_resource type="PackedScene" uid="uid://bi1p1sul5tdrj" path="res://nodes/player/player_camera.tscn" id="3_cnyqg"]
+[ext_resource type="PackedScene" uid="uid://dq8m1un7enhgx" path="res://ui/nodes/panel.tscn" id="3_ulujf"]
+[ext_resource type="PackedScene" uid="uid://d264a23a2g0ym" path="res://ui/nodes/title_label.tscn" id="4_1loci"]
+[ext_resource type="PackedScene" uid="uid://cajw4rq6o3ak3" path="res://ui/nodes/label.tscn" id="5_tqqjr"]
+[ext_resource type="PackedScene" uid="uid://cnqn5uckxauwq" path="res://ui/nodes/button.tscn" id="5_yvssi"]
 
 [node name="DeathScreen" type="Node" unique_id=1599705515]
 script = ExtResource("1_w8h0d")
@@ -20,77 +23,55 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Panel" type="Panel" parent="UI/Control" unique_id=1685492994]
+[node name="CenterContainer" type="CenterContainer" parent="UI/Control" unique_id=234740034]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 288.0
-offset_top = 162.0
-offset_right = -288.0
-offset_bottom = -162.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Title" type="Label" parent="UI/Control/Panel" unique_id=167173367]
+[node name="Panel" parent="UI/Control/CenterContainer" unique_id=2070056285 instance=ExtResource("3_ulujf")]
+layout_mode = 2
+
+[node name="VSplitContainer" type="VSplitContainer" parent="UI/Control/CenterContainer/Panel" unique_id=1139980797]
 layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -296.5
-offset_top = 14.0
-offset_right = 296.5
-offset_bottom = 77.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
-theme = ExtResource("2_gpfue")
-theme_override_font_sizes/font_size = 45
-text = "💀🦆 You ducked up!! 🦆💀"
-horizontal_alignment = 1
+grow_vertical = 2
+split_offsets = PackedInt32Array(63, 246)
+dragging_enabled = false
+dragger_visibility = 1
+split_offset = 63
 
-[node name="ScoreCounter" type="Label" parent="UI/Control/Panel" unique_id=1281114059]
-layout_mode = 0
-offset_top = 94.0
-offset_right = 181.0
-offset_bottom = 117.0
-text = "Time survived: 00m 00s"
+[node name="TitleLabel" parent="UI/Control/CenterContainer/Panel/VSplitContainer" unique_id=6593006 instance=ExtResource("4_1loci")]
+layout_mode = 2
+text = "You Ducked Up!!"
 
-[node name="HighscoreCounter" type="Label" parent="UI/Control/Panel" unique_id=35665994]
-layout_mode = 0
-offset_top = 117.0
-offset_right = 181.0
-offset_bottom = 140.0
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/Control/CenterContainer/Panel/VSplitContainer" unique_id=1081044465]
+layout_mode = 2
+
+[node name="ScoreLabel" parent="UI/Control/CenterContainer/Panel/VSplitContainer/VBoxContainer" unique_id=1720302300 instance=ExtResource("5_tqqjr")]
+layout_mode = 2
+text = "Time Survived: 00m 00s"
+
+[node name="HighscoreLabel" parent="UI/Control/CenterContainer/Panel/VSplitContainer/VBoxContainer" unique_id=1520937447 instance=ExtResource("5_tqqjr")]
+layout_mode = 2
 text = "Highscore: 00m 00s"
 
-[node name="MainMenuButton" type="Button" parent="UI/Control/Panel" unique_id=1107918992]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -168.0
-offset_top = -46.0
-offset_right = -8.0
-offset_bottom = -15.0
-grow_horizontal = 2
-grow_vertical = 0
-text = "Back to Duck Menu"
+[node name="ButtonContainer" type="VBoxContainer" parent="UI/Control/CenterContainer/Panel/VSplitContainer" unique_id=778240905]
+layout_mode = 2
+alignment = 2
 
-[node name="RetryButton" type="Button" parent="UI/Control/Panel" unique_id=500844113]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = 8.0
-offset_top = -46.0
-offset_right = 168.0
-offset_bottom = -15.0
-grow_horizontal = 2
-grow_vertical = 0
-text = "Duck Again
-"
+[node name="RetryButton" parent="UI/Control/CenterContainer/Panel/VSplitContainer/ButtonContainer" unique_id=642408839 instance=ExtResource("5_yvssi")]
+layout_mode = 2
+text = "Duck Again"
+
+[node name="MainMenuButton" parent="UI/Control/CenterContainer/Panel/VSplitContainer/ButtonContainer" unique_id=1680412350 instance=ExtResource("5_yvssi")]
+layout_mode = 2
+text = "Back to Duck Menu"
 
 [node name="Env" type="Node2D" parent="." unique_id=1117941202]
 
@@ -98,5 +79,5 @@ text = "Duck Again
 
 [node name="PlayerCamera" parent="Env" unique_id=2141972906 instance=ExtResource("3_cnyqg")]
 
-[connection signal="button_down" from="UI/Control/Panel/MainMenuButton" to="." method="_on_main_menu_button_button_down"]
-[connection signal="button_down" from="UI/Control/Panel/RetryButton" to="." method="_on_try_again_button_down"]
+[connection signal="button_down" from="UI/Control/CenterContainer/Panel/VSplitContainer/ButtonContainer/RetryButton" to="." method="_on_retry_button_down"]
+[connection signal="button_down" from="UI/Control/CenterContainer/Panel/VSplitContainer/ButtonContainer/MainMenuButton" to="." method="_on_main_menu_button_down"]
