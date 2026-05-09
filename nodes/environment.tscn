@@ -30,11 +30,10 @@ position = Vector2(700, -327)
 [node name="SpawnMax" type="Node2D" parent="ArrowSpawner" unique_id=727008278]
 position = Vector2(700, 329)
 
-[node name="CloudSpawner" parent="." unique_id=525504888 node_paths=PackedStringArray("min_spawn_point", "max_spawn_point", "min_despawn_point") instance=ExtResource("5_wpn1q")]
+[node name="CloudSpawner" parent="." unique_id=525504888 node_paths=PackedStringArray("min_spawn_point", "max_spawn_point") instance=ExtResource("5_wpn1q")]
 cloud_registry = ExtResource("6_4r44i")
 min_spawn_point = NodePath("SpawnMin")
 max_spawn_point = NodePath("SpawnMax")
-min_despawn_point = NodePath("SpawnMin2")
 
 [node name="SpawnMin" type="Node2D" parent="CloudSpawner" unique_id=2053402638]
 position = Vector2(1482, -327)
