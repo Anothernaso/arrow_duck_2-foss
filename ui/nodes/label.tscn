@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://cajw4rq6o3ak3"]
+
+[ext_resource type="Theme" uid="uid://b4knt16xuynoj" path="res://ui/themes/arrow_duck_2_theme.tres" id="1_sp5j7"]
+
+[node name="Label" type="Label" unique_id=1720302300]
+theme = ExtResource("1_sp5j7")
+text = "Label"
