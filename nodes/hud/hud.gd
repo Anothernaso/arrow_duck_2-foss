@@ -1,9 +1,10 @@
 extends Node
 
-@onready var score_counter_label: Label = $Control/ScoreCounter
-@onready var highscore_counter_label: Label = $Control/HighscoreCounter
-@onready var level_progres_bar: ProgressBar = $Control/LevelProgressBar
-@onready var level_progres_info_label: Label = $Control/LevelProgressInfo
+@onready var level_progres_bar: ProgressBar = $Control/VBoxContainer/LevelProgressBar
+@onready var level_progres_info_label: Label = $Control/VBoxContainer/LevelProgressInfo
+@onready var score_counter_label: Label = $Control/VBoxContainer/ScoreCounter
+@onready var highscore_counter_label: Label = $Control/VBoxContainer/HighscoreCounter
+
 
 func _ready() -> void:
 	_init_.call_deferred()
@@ -27,8 +28,8 @@ func _after_tick(_delta: float) -> void:
 		next_start_time = ArrowSpawner.singleton.timeline_registry.timelines[next_index].start_time
 	
 	# Update the HUD
-	score_counter_label.text = "Time survived: " + FormatUtils.format_time(AD_ScoreManager.time_survived)
+	score_counter_label.text = "Time Survived: " + FormatUtils.format_time(AD_ScoreManager.time_survived)
 	level_progres_bar.max_value = next_start_time
 	level_progres_bar.value = ArrowSpawner.singleton.current_timeline_position
-	level_progres_info_label.text = "Time left:\n" + FormatUtils.format_time(next_start_time - ArrowSpawner.singleton.current_timeline_position)
+	level_progres_info_label.text = "Time Left:\n" + FormatUtils.format_time(next_start_time - ArrowSpawner.singleton.current_timeline_position)
 	
