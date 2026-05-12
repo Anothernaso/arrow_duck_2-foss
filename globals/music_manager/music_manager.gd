@@ -89,6 +89,6 @@ func set_album(album: MusicAlbum, force_play_mode: ForcePlayMode = ForcePlayMode
 func play_random() -> void:
 	if !_current_album: return
 	
-	var stream := ArrayUtils.get_random_element(_current_album.streams) as AudioStream
+	var stream := AD_ArrayUtils.get_random_element(_current_album.streams) as AudioStream
 	play_stream(stream)
 	

@@ -1,7 +1,7 @@
-class_name ArrowSpawner
+class_name AD_ArrowSpawner
 extends Node2D
 
-static var singleton: ArrowSpawner
+static var singleton: AD_ArrowSpawner
 
 @export var min_spawn_point_node: Node2D
 @export var max_spawn_point_node: Node2D
@@ -43,7 +43,7 @@ func initialize() -> void:
 	min_spawn_point = min_spawn_point_node.global_position
 	max_spawn_point = max_spawn_point_node.global_position
 	
-	TimeTicker.singleton.on_tick.connect(time_tick)
+	AD_TimeTicker.singleton.on_tick.connect(time_tick)
 	
 	if current_timeline == null:
 		load_tl()
@@ -78,7 +78,7 @@ func update_timeline() -> void:
 ## A function that is called every time-tick and handles arrow spawning.
 ## It finds the correct arrows to spawn and spawns them.
 func spawn_random() -> void:
-	print("📢 WEEE WOOOO WEEE WOOO!! Spawning Arrow! 📢")
+	print("WEEE WOOOO WEEE WOOO!! Spawning Arrow...")
 	
 	if !current_timeline: return
 	
@@ -88,7 +88,7 @@ func spawn_random() -> void:
 		if arrow.min_survival_time > current_timeline_position or arrow.max_survival_time < current_timeline_position:
 			continue
 		
-		var spawn_pos := Vector2Utils.randv2_range(min_spawn_point, max_spawn_point) 
+		var spawn_pos := AD_Vector2Utils.randv2_range(min_spawn_point, max_spawn_point) 
 		
 		var arrow_node: Node2D = arrow.scene.instantiate()
 		arrow_node.global_position = spawn_pos
@@ -98,14 +98,14 @@ func spawn_random() -> void:
 
 ## Saves what timeline we are currently in.
 func save_tl() -> void:
-	var wrapper := CurrentTimelineWrapper.new()
+	var wrapper := AD_CurrentTimelineWrapper.new()
 	wrapper.current_timeline_index = timeline_registry.timelines.rfind(current_timeline)
 	
-	SaverUtils.save(wrapper, Constants.PERSISTENT_DIR, Constants.CURRENT_TIMELINE_FILE_NAME)
+	AD_SaverUtils.save(wrapper, AD_Constants.PERSISTENT_DIR, AD_Constants.CURRENT_TIMELINE_FILE_NAME)
 
 ## Loads what timeline we were in when saving.
 func load_tl() -> void:
-	var wrapper := SaverUtils.load(Constants.PERSISTENT_DIR, Constants.CURRENT_TIMELINE_FILE_NAME) as CurrentTimelineWrapper
+	var wrapper := AD_SaverUtils.load(AD_Constants.PERSISTENT_DIR, AD_Constants.CURRENT_TIMELINE_FILE_NAME) as AD_CurrentTimelineWrapper
 	
 	if !wrapper:
 		current_timeline = timeline_registry.timelines[0]

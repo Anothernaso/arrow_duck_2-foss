@@ -1,4 +1,4 @@
-class_name FormatUtils
+class_name AD_FormatUtils
 
 # Fancy time formatter that produces readable timestamps
 static func format_time(seconds: float) -> String:

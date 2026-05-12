@@ -1,4 +1,4 @@
-class_name Vector2Utils
+class_name AD_Vector2Utils
 
 ## Returns a random floating-point value between `from` and `to` (inclusive).
 static func randv2_range(from: Vector2, to: Vector2) -> Vector2:

@@ -30,10 +30,10 @@ func _on_body_entered(body: Node2D) -> void:
 	p3.direction = Vector2(0, 1)
 	p4.direction = Vector2(1, 0)
 	
-	ArrowSpawner.singleton.arrow_holder.add_child.call_deferred(p1)
-	ArrowSpawner.singleton.arrow_holder.add_child.call_deferred(p2)
-	ArrowSpawner.singleton.arrow_holder.add_child.call_deferred(p3)
-	ArrowSpawner.singleton.arrow_holder.add_child.call_deferred(p4)
+	AD_ArrowSpawner.singleton.arrow_holder.add_child.call_deferred(p1)
+	AD_ArrowSpawner.singleton.arrow_holder.add_child.call_deferred(p2)
+	AD_ArrowSpawner.singleton.arrow_holder.add_child.call_deferred(p3)
+	AD_ArrowSpawner.singleton.arrow_holder.add_child.call_deferred(p4)
 	
 	arrow_root.queue_free()
 	

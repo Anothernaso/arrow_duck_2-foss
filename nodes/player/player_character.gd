@@ -1,7 +1,5 @@
 extends CharacterBody2D
 
-class_name PlayerCharacter
-
 @export var speed: float = 300.0
 @export var sfx_player_scene: PackedScene
 @export var death_sfx: AudioStream

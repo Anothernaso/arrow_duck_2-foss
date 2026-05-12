@@ -1,7 +1,7 @@
-class_name TimeTicker
+class_name AD_TimeTicker
 extends Node
 
-static var singleton: TimeTicker
+static var singleton: AD_TimeTicker
 
 @onready var _timer: Timer = $Timer
 

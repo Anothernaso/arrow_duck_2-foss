@@ -1,7 +1,7 @@
-class_name CloudSpawner
+class_name AD_CloudSpawner
 extends Node2D
 
-static var singleton: CloudSpawner
+static var singleton: AD_CloudSpawner
 
 @export var cloud_registry: CloudRegistry
 @export var min_spawn_point: Node2D
@@ -15,20 +15,20 @@ func _ready() -> void:
 	
 
 func _initialize() -> void:
-	TimeTicker.singleton.on_tick.connect(_on_tick)
+	AD_TimeTicker.singleton.on_tick.connect(_on_tick)
 
 func _on_tick(_delta: float) -> void:
 	var success := randf() < 0.2
 	
 	if !success || cloud_registry.cloud_scenes.is_empty(): return
 	
-	var cloud_scene := ArrayUtils \
+	var cloud_scene := AD_ArrayUtils \
 		.get_random_element(
 			cloud_registry.cloud_scenes
 		) as PackedScene
 	
 	var cloud := cloud_scene.instantiate() as CloudBase
-	var spawn_position := Vector2Utils.randv2_range(
+	var spawn_position := AD_Vector2Utils.randv2_range(
 		min_spawn_point.global_position,
 		max_spawn_point.global_position
 	)

@@ -1,4 +1,4 @@
-class_name Constants
+class_name AD_Constants
 
 const PERSISTENT_DIR: String = "user://persistent/"
 const CURRENT_TIMELINE_FILE_NAME: String = "current_timeline.tres"

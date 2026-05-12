@@ -7,7 +7,7 @@ static var highscore_time_survived: float = 0
 
 
 func _ready() -> void:
-	TimeTicker.singleton.after_tick.connect.call_deferred(_after_tick)
+	AD_TimeTicker.singleton.after_tick.connect.call_deferred(_after_tick)
 	_load_highscore()
 	
 
@@ -23,14 +23,14 @@ static func update_highscore() -> void:
 	
 
 static func _save_highscore() -> void:
-	var wrapper: HighscoreWrapper = HighscoreWrapper.new()
+	var wrapper := AD_HighscoreWrapper.new()
 	wrapper.highscore = highscore_time_survived
 	
-	SaverUtils.save(wrapper, Constants.PERSISTENT_DIR, Constants.HIGHSCORE_FILE_NAME)
+	AD_SaverUtils.save(wrapper, AD_Constants.PERSISTENT_DIR, AD_Constants.HIGHSCORE_FILE_NAME)
 	
 
 static func _load_highscore() -> void:
-	var wrapper := SaverUtils.load(Constants.PERSISTENT_DIR, Constants.HIGHSCORE_FILE_NAME) as HighscoreWrapper
+	var wrapper := AD_SaverUtils.load(AD_Constants.PERSISTENT_DIR, AD_Constants.HIGHSCORE_FILE_NAME) as AD_HighscoreWrapper
 	
 	if !wrapper: return
 	

@@ -16,7 +16,7 @@ func _ready() -> void:
 	# Add the body to the `kill_offscreen` layer
 	set_collision_layer_value(3, true)
 	
-	scale = Vector2Utils.randv2_range(
+	scale = AD_Vector2Utils.randv2_range(
 		Vector2(
 			min_scale,
 			min_scale

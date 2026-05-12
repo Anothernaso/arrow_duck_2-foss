@@ -19,5 +19,5 @@ func _on_quit_button_down() -> void:
 
 func _on_delete_data_button_down() -> void:
 	print("Deleting all saved data!")
-	SaverUtils.delete(Constants.PERSISTENT_DIR, Constants.CURRENT_TIMELINE_FILE_NAME)
-	SaverUtils.delete(Constants.PERSISTENT_DIR, Constants.HIGHSCORE_FILE_NAME)
+	AD_SaverUtils.delete(AD_Constants.PERSISTENT_DIR, AD_Constants.CURRENT_TIMELINE_FILE_NAME)
+	AD_SaverUtils.delete(AD_Constants.PERSISTENT_DIR, AD_Constants.HIGHSCORE_FILE_NAME)

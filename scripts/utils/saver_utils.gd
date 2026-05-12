@@ -1,4 +1,4 @@
-class_name SaverUtils
+class_name AD_SaverUtils
 
 static func save(resource: Resource, dir: String, file_name: String, flags: int = 0) -> void:
 	var file_path := dir + "/" + file_name
