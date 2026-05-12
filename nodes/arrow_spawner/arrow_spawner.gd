@@ -96,14 +96,14 @@ func spawn_random() -> void:
 		
 	
 
-## Saves what timeline we are currently in.
+## Saves the timeline that we are currently in.
 func save_tl() -> void:
 	var wrapper := AD_CurrentTimelineWrapper.new()
 	wrapper.current_timeline_index = timeline_registry.timelines.rfind(current_timeline)
 	
 	AD_SaverUtils.save(wrapper, AD_Constants.PERSISTENT_DIR, AD_Constants.CURRENT_TIMELINE_FILE_NAME)
 
-## Loads what timeline we were in when saving.
+## Loads the timeline that we were in when saving.
 func load_tl() -> void:
 	var wrapper := AD_SaverUtils.load(AD_Constants.PERSISTENT_DIR, AD_Constants.CURRENT_TIMELINE_FILE_NAME) as AD_CurrentTimelineWrapper
 	
