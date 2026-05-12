@@ -49,9 +49,9 @@ func _physics_process(_delta: float) -> void:
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if !body.is_in_group("lethal"): return
 	
-	printerr("💀🦆 You ducked up!! 🦆💀")
+	printerr("You ducked up!!") # Print it as an error ;)
 	
-	ScoreCounter.update_highscore()
+	AD_ScoreManager.update_highscore()
 	
 	var sfx_player := sfx_player_scene.instantiate() as AudioStreamPlayer
 	sfx_player.stream = death_sfx

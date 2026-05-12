@@ -35,7 +35,7 @@ func _ready() -> void:
 ## It also resets the current score.
 func restart_current_timeline() -> void:
 	total_timeline_position -= current_timeline_position
-	ScoreCounter.singleton.time_survived = 0
+	AD_ScoreManager.time_survived = 0
 	current_timeline_position = 0
 
 ## Initializes the ArrowSpawner.
