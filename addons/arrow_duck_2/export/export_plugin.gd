@@ -1,6 +1,8 @@
 class_name ADPlugin_ExportPlugin
 extends EditorExportPlugin
 
+var _export_path: String
+
 func _export_begin(
 	features: PackedStringArray,
 	is_debug: bool,
@@ -12,10 +14,14 @@ func _export_begin(
 		config = ADPlugin_ExportConfig.new()
 		
 	
+	_export_path = path
 	var export_dir := path.get_base_dir()
 	
 	if !DirAccess.dir_exists_absolute(export_dir):
 		DirAccess.make_dir_recursive_absolute(export_dir)
+	else:
+		ADPlugin_DirUtils.remove_contents_recursive_absolute(export_dir)
+		
 	
 	for include_file in config.include_files:
 		
@@ -23,4 +29,26 @@ func _export_begin(
 		
 		DirAccess.copy_absolute(abs_include_file, export_dir.path_join(abs_include_file.get_file()))
 		
+	
+
+func _export_end() -> void:
+	var path := _export_path
+	
+	var export_dir := path.get_base_dir()
+	
+	var proj_name := path.get_basename()
+	var proj_version: String = ProjectSettings.get_setting("application/config/version", "")
+	
+	var zip_file := export_dir.path_join(proj_name)
+	if proj_version != "":
+		zip_file += "-" + proj_version
+	
+	zip_file += ".zip"
+	
+	var packer := ZIPPacker.new()
+	packer.open(zip_file)
+	
+	ADPlugin_ZIPUtils.add_directory(packer, export_dir, export_dir)
+	
+	packer.close()
 	
