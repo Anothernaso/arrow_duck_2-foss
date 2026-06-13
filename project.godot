@@ -12,7 +12,7 @@ config_version=5
 
 config/name="Arrow Duck 2"
 config/description="A game about a duck ducking from arrows."
-config/version="3.3.0"
+config/version="3.4.0"
 run/main_scene="uid://lgpl40m4r1b2"
 config/features=PackedStringArray("4.6", "Forward Plus")
 boot_splash/bg_color=Color(0.246792, 0.734962, 1, 1)
@@ -49,7 +49,7 @@ project/assembly_name="Arrow Duck 2"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/ad_export/plugin.cfg", "res://addons/arrow_duck_2/plugin.cfg")
+enabled=PackedStringArray("res://addons/arrow_duck_2/plugin.cfg")
 
 [global_group]
 
