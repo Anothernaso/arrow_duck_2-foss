@@ -47,6 +47,10 @@ display_server/driver.linuxbsd="wayland"
 
 project/assembly_name="Arrow Duck 2"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/ad_export/plugin.cfg")
+
 [global_group]
 
 player=""
