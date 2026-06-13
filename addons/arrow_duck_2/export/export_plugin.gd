@@ -39,14 +39,17 @@ func _export_end() -> void:
 	var proj_name := path.get_basename()
 	var proj_version: String = ProjectSettings.get_setting("application/config/version", "")
 	
-	var zip_file := export_dir.path_join(proj_name)
+	var zip_path := export_dir.path_join(proj_name)
 	if proj_version != "":
-		zip_file += "-" + proj_version
+		zip_path += "-" + proj_version
 	
-	zip_file += ".zip"
+	zip_path += ".zip"
 	
 	var packer := ZIPPacker.new()
-	packer.open(zip_file)
+	var result := packer.open(zip_path)
+	if result != Error.OK:
+		push_error("Failed to open zip: %s" % zip_path)
+		return
 	
 	ADPlugin_ZIPUtils.add_directory(packer, export_dir, export_dir)
 	

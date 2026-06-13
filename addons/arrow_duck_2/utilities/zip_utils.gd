@@ -17,7 +17,9 @@ static func add_directory(packer: ZIPPacker, base_dir: String, current_dir: Stri
 		var full_path := current_dir.path_join(file_name)
 		
 		if dir.current_is_dir():
-			add_directory(packer, base_dir, full_path)
+			var result := add_directory(packer, base_dir, full_path)
+			if result != Error.OK:
+				return result
 		else:
 			var relative_path := full_path.trim_prefix(base_dir + "/")
 			relative_path = relative_path.simplify_path()
