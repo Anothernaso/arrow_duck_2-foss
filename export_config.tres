@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="ADPlugin_ExportConfig" format=3 uid="uid://crvrsoa3cduw5"]
+
+[ext_resource type="Script" uid="uid://bxh6285cxtb1" path="res://addons/arrow_duck_2/export/export_config.gd" id="1_xjy8y"]
+
+[resource]
+script = ExtResource("1_xjy8y")
+include_files = Array[String](["res://README.txt", "res://LICENSE"])
+metadata/_custom_type_script = "uid://bxh6285cxtb1"
