@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://doujkxaxp6u5w"]
+
+[ext_resource type="Script" uid="uid://b42ttmc8a81fv" path="res://nodes/ui_manager/ui_manager.gd" id="1_mohun"]
+[ext_resource type="PackedScene" uid="uid://bfqrgwsmvmows" path="res://nodes/hud/hud.tscn" id="2_0xu2n"]
+
+[node name="UIManager" type="Node" unique_id=1286270223]
+script = ExtResource("1_mohun")
+_hud_scene = ExtResource("2_0xu2n")
+metadata/_custom_type_script = "uid://b42ttmc8a81fv"

@@ -30,8 +30,8 @@ func _physics_process(_delta: float) -> void:
 	if is_right:
 		touch.x = 1
 	
-	var movement_y := Input.get_axis("forward", "backward")
-	var movement_x := Input.get_axis("left", "right")
+	var movement_y := Input.get_axis(AD_Constants.INPUT_MOVE_FORWARD, AD_Constants.INPUT_MOVE_BACKWARD)
+	var movement_x := Input.get_axis(AD_Constants.INPUT_MOVE_LEFT, AD_Constants.INPUT_MOVE_RIGHT)
 	var movement: Vector2
 	
 	if !use_touch:
