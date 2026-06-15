@@ -49,7 +49,7 @@ project/assembly_name="Arrow Duck 2"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/arrow_duck_2/plugin.cfg")
+enabled=PackedStringArray("res://addons/anat_utils/plugin.cfg", "res://addons/arrow_duck_2/plugin.cfg")
 
 [global_group]
 

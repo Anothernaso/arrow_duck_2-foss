@@ -20,7 +20,7 @@ func _export_begin(
 	if !DirAccess.dir_exists_absolute(export_dir):
 		DirAccess.make_dir_recursive_absolute(export_dir)
 	else:
-		ADPlugin_DirUtils.remove_contents_recursive_absolute(export_dir)
+		AUtils_DirUtils.remove_contents_recursive_absolute(export_dir)
 		
 	
 	for include_file in config.include_files:

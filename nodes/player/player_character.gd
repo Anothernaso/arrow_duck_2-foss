@@ -56,7 +56,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	get_tree().root.add_child(sfx_player)
 	
 	var game_state_manager: AD_GameStateManager = AD_GlobalGameStateManager
-	game_state_manager.set_state(GameStates.State.DeathScreen)
+	game_state_manager.set_state(AD_GameStates.State.DEATH_SCREEN)
 	
 
 

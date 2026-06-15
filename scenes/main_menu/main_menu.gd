@@ -12,7 +12,7 @@ func _ready() -> void:
 
 func _on_start_button_down() -> void:
 	var game_state_manager: AD_GameStateManager = AD_GlobalGameStateManager
-	game_state_manager.set_state(GameStates.State.InGame)
+	game_state_manager.set_state(AD_GameStates.State.IN_GAME)
 
 func _on_quit_button_down() -> void:
 	get_tree().quit()

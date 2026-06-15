@@ -17,9 +17,9 @@ func _ready() -> void:
 
 func _on_retry_button_down() -> void:
 	var game_state_manager: AD_GameStateManager = AD_GlobalGameStateManager
-	game_state_manager.set_state(GameStates.State.InGame)
+	game_state_manager.set_state(AD_GameStates.State.IN_GAME)
 
 
 func _on_main_menu_button_down() -> void:
 	var game_state_manager: AD_GameStateManager = AD_GlobalGameStateManager
-	game_state_manager.set_state(GameStates.State.MainMenu)
+	game_state_manager.set_state(AD_GameStates.State.MAIN_MENU)

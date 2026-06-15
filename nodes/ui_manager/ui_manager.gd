@@ -10,7 +10,7 @@ var _ui_node: Node
 
 enum UIState {
 	HUD,
-	PauseMenu,
+	PAUSE_MENU,
 }
 
 func _ready() -> void:
@@ -34,7 +34,7 @@ func _update_ui() -> void:
 			quick_spawn.call(_hud_scene)
 			
 		
-		UIState.PauseMenu:
+		UIState.PAUSE_MENU:
 			#quick_spawn.call(_pause_menu_scene)
 			pass
 			

@@ -1,11 +1,21 @@
-class_name ADPlugin_DirUtils
+class_name AUtils_DirUtils
 
+## Recursively removes the contents of the given directory
+## where `path` is the filepath/URI/URL of the directory.
+##
+## # Returns
+##
+## `Error.OK` on success.
+## `!Error.OK` on failure.
+##
 static func remove_contents_recursive_absolute(path: String) -> Error:
 	var dir = DirAccess.open(path)
 	if !dir:
 		return Error.ERR_CANT_OPEN
 	
-	var result := dir.list_dir_begin()
+	var result: Error
+	
+	result = dir.list_dir_begin()
 	if result != Error.OK:
 		return result
 	
@@ -16,13 +26,13 @@ static func remove_contents_recursive_absolute(path: String) -> Error:
 			var full_path := path.path_join(filename)
 			
 			if dir.current_is_dir():
-				var result_ := remove_directory_recursive_absolute(full_path)
-				if result_ != Error.OK:
-					return result_
+				result = remove_directory_recursive_absolute(full_path)
+				if result != Error.OK:
+					return result
 			else:
-				var result_ := DirAccess.remove_absolute(full_path)
-				if result_ != Error.OK:
-					return result_
+				result = DirAccess.remove_absolute(full_path)
+				if result != Error.OK:
+					return result
 				
 			
 		
@@ -34,6 +44,14 @@ static func remove_contents_recursive_absolute(path: String) -> Error:
 	return Error.OK
 	
 
+## Recursively removes the given directory and all its contents
+## where `path` is the filepath/URI/URL of the directory.
+##
+## # Returns
+##
+## `Error.OK` on success.
+## `!Error.OK` on failure.
+##
 static func remove_directory_recursive_absolute(path: String) -> Error:
 	var result := remove_directory_recursive_absolute(path)
 	if result != Error.OK:

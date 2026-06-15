@@ -4,6 +4,16 @@ extends EditorPlugin
 
 var export_plugin: ADPlugin_ExportPlugin
 
+func _enable_plugin() -> void:
+	# Add autoloads here.
+	pass
+
+
+func _disable_plugin() -> void:
+	# Remove autoloads here.
+	pass
+
+
 func _enter_tree() -> void:
 	export_plugin = ADPlugin_ExportPlugin.new()
 	
