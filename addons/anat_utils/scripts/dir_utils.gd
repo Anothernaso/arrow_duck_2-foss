@@ -53,7 +53,7 @@ static func remove_contents_recursive_absolute(path: String) -> Error:
 ## `!Error.OK` on failure.
 ##
 static func remove_directory_recursive_absolute(path: String) -> Error:
-	var result := remove_directory_recursive_absolute(path)
+	var result := remove_contents_recursive_absolute(path)
 	if result != Error.OK:
 		return result
 	
