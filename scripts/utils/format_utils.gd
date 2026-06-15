@@ -1,6 +1,6 @@
 class_name AD_FormatUtils
 
-# Fancy time formatter that produces readable timestamps
+## Fancy time formatter that produces readable timestamps
 static func format_time(seconds: float) -> String:
 	var total_seconds := int(seconds + 0.5)
 	
