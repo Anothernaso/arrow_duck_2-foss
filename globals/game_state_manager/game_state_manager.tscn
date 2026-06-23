@@ -4,5 +4,6 @@
 [ext_resource type="Resource" uid="uid://biv4qjgu23bko" path="res://content/game_states.tres" id="2_eh2t2"]
 
 [node name="GameStateManager" type="Node" unique_id=2084264654]
+process_mode = 3
 script = ExtResource("1_0tlvk")
 _states = ExtResource("2_eh2t2")

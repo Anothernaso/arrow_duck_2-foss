@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://ddngac7apux3w"]
+
+[ext_resource type="Script" uid="uid://db760dionavg7" path="res://nodes/pause_menu/pause_menu.gd" id="1_dh2x3"]
+[ext_resource type="PackedScene" uid="uid://ciuu8dkibjaku" path="res://ui/nodes/dialog_panel.tscn" id="2_rqvhn"]
+[ext_resource type="PackedScene" uid="uid://cnqn5uckxauwq" path="res://ui/nodes/button.tscn" id="3_0nuxd"]
+
+[node name="PauseMenu" type="CanvasLayer" unique_id=1692596582]
+process_mode = 3
+script = ExtResource("1_dh2x3")
+
+[node name="Control" type="Control" parent="." unique_id=1533842456]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="Control" unique_id=1580862635]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="DialogPanel" parent="Control/CenterContainer" unique_id=1655911182 instance=ExtResource("2_rqvhn")]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/CenterContainer/DialogPanel" unique_id=507884725]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ResumeButton" parent="Control/CenterContainer/DialogPanel/VBoxContainer" unique_id=642408839 instance=ExtResource("3_0nuxd")]
+layout_mode = 2
+text = "Resume"
+
+[node name="MainMenuButton" parent="Control/CenterContainer/DialogPanel/VBoxContainer" unique_id=100551576 instance=ExtResource("3_0nuxd")]
+layout_mode = 2
+text = "Main Menu"
+
+[connection signal="button_down" from="Control/CenterContainer/DialogPanel/VBoxContainer/ResumeButton" to="." method="_on_resume_button_down"]
+[connection signal="button_down" from="Control/CenterContainer/DialogPanel/VBoxContainer/MainMenuButton" to="." method="_on_main_menu_button_down"]

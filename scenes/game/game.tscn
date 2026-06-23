@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cg7jqtxkv5keq" path="res://nodes/time_ticker/time_ticker.tscn" id="4_lfrn8"]
 [ext_resource type="PackedScene" uid="uid://dnreyu6le1g6q" path="res://nodes/score_manager/score_manager.tscn" id="5_5i0tg"]
 [ext_resource type="PackedScene" uid="uid://doujkxaxp6u5w" path="res://nodes/ui_manager/ui_manager.tscn" id="6_5i0tg"]
+[ext_resource type="PackedScene" uid="uid://c72hhrvusc3du" path="res://nodes/pause_manager/pause_manager.tscn" id="7_bdhmt"]
 
 [node name="Game" type="Node" unique_id=1118455543]
 script = ExtResource("1_rhsli")
@@ -16,5 +17,7 @@ album = ExtResource("2_lfrn8")
 [node name="TimeTicker" parent="." unique_id=1223847226 instance=ExtResource("4_lfrn8")]
 
 [node name="ScoreManager" parent="." unique_id=562398269 instance=ExtResource("5_5i0tg")]
+
+[node name="PauseManager" parent="." unique_id=871821713 instance=ExtResource("7_bdhmt")]
 
 [node name="UIManager" parent="." unique_id=1286270223 instance=ExtResource("6_5i0tg")]

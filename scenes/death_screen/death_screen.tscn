@@ -73,11 +73,11 @@ text = "Duck Again"
 layout_mode = 2
 text = "Back to Duck Menu"
 
-[node name="Env" type="Node2D" parent="." unique_id=1117941202]
+[node name="Environment" type="Node2D" parent="." unique_id=1117941202]
 
-[node name="Background" parent="Env" unique_id=67694840 instance=ExtResource("2_eu6q6")]
+[node name="Background" parent="Environment" unique_id=67694840 instance=ExtResource("2_eu6q6")]
 
-[node name="PlayerCamera" parent="Env" unique_id=2141972906 instance=ExtResource("3_cnyqg")]
+[node name="PlayerCamera" parent="Environment" unique_id=2141972906 instance=ExtResource("3_cnyqg")]
 
 [connection signal="button_down" from="UI/Control/CenterContainer/Panel/VSplitContainer/ButtonContainer/RetryButton" to="." method="_on_retry_button_down"]
 [connection signal="button_down" from="UI/Control/CenterContainer/Panel/VSplitContainer/ButtonContainer/MainMenuButton" to="." method="_on_main_menu_button_down"]

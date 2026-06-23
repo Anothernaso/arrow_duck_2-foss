@@ -2,8 +2,11 @@
 
 [ext_resource type="Script" uid="uid://b42ttmc8a81fv" path="res://nodes/ui_manager/ui_manager.gd" id="1_mohun"]
 [ext_resource type="PackedScene" uid="uid://bfqrgwsmvmows" path="res://nodes/hud/hud.tscn" id="2_0xu2n"]
+[ext_resource type="PackedScene" uid="uid://ddngac7apux3w" path="res://nodes/pause_menu/pause_menu.tscn" id="3_08xrr"]
 
 [node name="UIManager" type="Node" unique_id=1286270223]
+process_mode = 3
 script = ExtResource("1_mohun")
 _hud_scene = ExtResource("2_0xu2n")
+_pause_menu_scene = ExtResource("3_08xrr")
 metadata/_custom_type_script = "uid://b42ttmc8a81fv"
