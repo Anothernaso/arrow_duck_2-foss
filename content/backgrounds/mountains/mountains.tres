@@ -1,10 +1,17 @@
 [gd_resource type="Resource" script_class="AD_Background" format=3 uid="uid://xd2xj8yvhk7j"]
 
 [ext_resource type="Script" uid="uid://jrkqs51vogao" path="res://globals/background_manager/background_layer.gd" id="1_yuie7"]
-[ext_resource type="Resource" uid="uid://b3dnnq3bwnn58" path="res://content/backgrounds/mountains/sky.tres" id="2_5i5i7"]
 [ext_resource type="Script" uid="uid://d1t57pjr01qvn" path="res://globals/background_manager/background.gd" id="2_a6alj"]
+[ext_resource type="Resource" uid="uid://b3dnnq3bwnn58" path="res://content/backgrounds/mountains/layers/sky.tres" id="2_ev1vs"]
+[ext_resource type="Resource" uid="uid://dbgrkhvswutcd" path="res://content/backgrounds/mountains/layers/clouds_bg.tres" id="3_21uyg"]
+[ext_resource type="Resource" uid="uid://bc8lxf038wkt" path="res://content/backgrounds/mountains/layers/glacial_mountains.tres" id="4_yoy7e"]
+[ext_resource type="Resource" uid="uid://d3sror7fu2kd7" path="res://content/backgrounds/mountains/layers/clouds_mg_3.tres" id="5_27bg6"]
+[ext_resource type="Resource" uid="uid://uvucix6vm3iv" path="res://content/backgrounds/mountains/layers/clouds_mg_2.tres" id="6_yoy7e"]
+[ext_resource type="Resource" uid="uid://di0w4ag844x6t" path="res://content/backgrounds/mountains/layers/clouds_mg_1.tres" id="7_27bg6"]
+[ext_resource type="Resource" uid="uid://disrqjwrmcle5" path="res://content/backgrounds/mountains/layers/cloud_lonely.tres" id="8_27bg6"]
 
 [resource]
 script = ExtResource("2_a6alj")
-layers = Array[ExtResource("1_yuie7")]([ExtResource("2_5i5i7")])
+scale = Vector2(3, 3)
+layers = Array[ExtResource("1_yuie7")]([ExtResource("2_ev1vs"), ExtResource("3_21uyg"), ExtResource("4_yoy7e"), ExtResource("5_27bg6"), ExtResource("6_yoy7e"), ExtResource("7_27bg6"), ExtResource("8_27bg6")])
 metadata/_custom_type_script = "uid://d1t57pjr01qvn"

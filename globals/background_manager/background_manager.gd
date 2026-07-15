@@ -4,6 +4,7 @@ extends Node
 @export var _default_background: AD_Background
 @onready var _background_root: Node2D = $BackgroundRoot
 
+var _current_background: AD_Background
 var _current_background_node: Node2D
 
 func _ready() -> void:
@@ -12,9 +13,21 @@ func _ready() -> void:
 		
 	
 
-func set_background(background: AD_Background) -> void:
+func set_background(background: AD_Background, force: bool = false) -> void:
+	if !force && background == _current_background && _current_background_node:
+		return
+		
+	
+	_current_background = background
+	
 	if _current_background_node:
 		_current_background_node.queue_free()
+		
+	
+	if !background:
+		_current_background_node = null
+		return
+		
 	
 	_current_background_node = Node2D.new()
 	_background_root.add_child(_current_background_node)

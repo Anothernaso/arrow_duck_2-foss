@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="AD_BackgroundLayer" format=3 uid="uid://disrqjwrmcle5"]
+
+[ext_resource type="Script" uid="uid://jrkqs51vogao" path="res://globals/background_manager/background_layer.gd" id="1_fsim0"]
+
+[resource]
+script = ExtResource("1_fsim0")
+z_index = -1
+speed = 11.5
+texture_path = "uid://brfmw1n8f33iu"
+metadata/_custom_type_script = "uid://jrkqs51vogao"
