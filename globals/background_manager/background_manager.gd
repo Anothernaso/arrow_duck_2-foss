@@ -44,6 +44,7 @@ func set_background(background: AD_Background, force: bool = false) -> void:
 		parallax.z_index = layer.z_index
 		parallax.autoscroll.x = layer.speed
 		parallax.repeat_size = size
+		parallax.repeat_times = 4
 		
 		var sprite := Sprite2D.new()
 		parallax.add_child(sprite)

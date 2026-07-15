@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="AD_BackgroundLayer" format=3 uid="uid://b3dnnq3bwnn58"]
 
-[ext_resource type="Script" uid="uid://jrkqs51vogao" path="res://globals/background_manager/background_layer.gd" id="1_4e571"]
+[ext_resource type="Script" uid="uid://jrkqs51vogao" path="res://globals/background_manager/background_layer.gd" id="1_egq1k"]
 
 [resource]
-script = ExtResource("1_4e571")
+script = ExtResource("1_egq1k")
 z_index = -9
-speed = 5.0
+speed = 50.0
 texture_path = "uid://b62bov8q3n7pm"
 metadata/_custom_type_script = "uid://jrkqs51vogao"

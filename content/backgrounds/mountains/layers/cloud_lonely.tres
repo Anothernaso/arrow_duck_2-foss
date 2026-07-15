@@ -5,6 +5,6 @@
 [resource]
 script = ExtResource("1_fsim0")
 z_index = -1
-speed = 11.5
+speed = 115.0
 texture_path = "uid://brfmw1n8f33iu"
 metadata/_custom_type_script = "uid://jrkqs51vogao"

@@ -4,10 +4,14 @@ extends Node
 class_name MainMenu
 
 @export var album: MusicAlbum
+@export var background: AD_Background
 
 func _ready() -> void:
 	var music_manager: AD_MusicManager = AD_GlobalMusicManager
 	music_manager.set_album(album, AD_MusicManager.ForcePlayMode.IfChanged)
+	
+	var background_manager: AD_BackgroundManager = AD_GlobalBackgroundManager
+	background_manager.set_background.call_deferred(background)
 	
 
 func _on_start_button_down() -> void:
