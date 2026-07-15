@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="AD_Background" format=3 uid="uid://xd2xj8yvhk7j"]
+
+[ext_resource type="Script" uid="uid://jrkqs51vogao" path="res://globals/background_manager/background_layer.gd" id="1_yuie7"]
+[ext_resource type="Resource" uid="uid://b3dnnq3bwnn58" path="res://content/backgrounds/mountains/sky.tres" id="2_5i5i7"]
+[ext_resource type="Script" uid="uid://d1t57pjr01qvn" path="res://globals/background_manager/background.gd" id="2_a6alj"]
+
+[resource]
+script = ExtResource("2_a6alj")
+layers = Array[ExtResource("1_yuie7")]([ExtResource("2_5i5i7")])
+metadata/_custom_type_script = "uid://d1t57pjr01qvn"

@@ -1,0 +1,41 @@
+class_name AD_BackgroundManager
+extends Node
+
+@export var _default_background: AD_Background
+@onready var _background_root: Node2D = $BackgroundRoot
+
+var _current_background_node: Node2D
+
+func _ready() -> void:
+	if _default_background:
+		set_background.call_deferred(_default_background)
+		
+	
+
+func set_background(background: AD_Background) -> void:
+	if _current_background_node:
+		_current_background_node.queue_free()
+	
+	_current_background_node = Node2D.new()
+	_background_root.add_child(_current_background_node)
+	
+	for layer in background.layers:
+		var texture := load(layer.texture_path) as Texture2D
+		
+		var scale := background.scale * layer.scale
+		var size := texture.get_size() * scale
+		
+		var parallax := Parallax2D.new()
+		_current_background_node.add_child(parallax)
+		
+		parallax.z_index = layer.z_index
+		parallax.autoscroll.x = layer.speed
+		parallax.repeat_size = size
+		
+		var sprite := Sprite2D.new()
+		parallax.add_child(sprite)
+		
+		sprite.scale = scale
+		sprite.texture = texture
+		
+	
