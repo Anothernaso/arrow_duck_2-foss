@@ -1,7 +1,12 @@
 class_name AD_Constants
 
-# Filenames
-const PERSISTENT_DIR: String = "user://persistent/"
+# Directory Paths
+const PERSISTENT_DIR_PATH: String = "user://persistent/"
+
+# File Paths
+const SETTINGS_FILE_PATH: String = "user://settings.cfg"
+
+# File Names
 const CURRENT_TIMELINE_FILE_NAME: String = "current_timeline.tres"
 const HIGHSCORE_FILE_NAME: String = "highscore.tres"
 

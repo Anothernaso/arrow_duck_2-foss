@@ -26,11 +26,11 @@ static func _save_highscore() -> void:
 	var wrapper := AD_HighscoreWrapper.new()
 	wrapper.highscore = highscore_time_survived
 	
-	AD_SaverUtils.save(wrapper, AD_Constants.PERSISTENT_DIR, AD_Constants.HIGHSCORE_FILE_NAME)
+	AD_SaverUtils.save(wrapper, AD_Constants.PERSISTENT_DIR_PATH, AD_Constants.HIGHSCORE_FILE_NAME)
 	
 
 static func _load_highscore() -> void:
-	var wrapper := AD_SaverUtils.load(AD_Constants.PERSISTENT_DIR, AD_Constants.HIGHSCORE_FILE_NAME) as AD_HighscoreWrapper
+	var wrapper := AD_SaverUtils.load(AD_Constants.PERSISTENT_DIR_PATH, AD_Constants.HIGHSCORE_FILE_NAME) as AD_HighscoreWrapper
 	
 	if !wrapper: return
 	
