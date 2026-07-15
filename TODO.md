@@ -5,3 +5,4 @@
    - ~~Add UI manager that toggles between pause menu and HUD~~
    - Rework `ArrowSpawner` and entire timeline system to allow for new gameplay
    - Add settings menu
+   - Rename `MusicAlbum` class to `AD_MusicAlbum`

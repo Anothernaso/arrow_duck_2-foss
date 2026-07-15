@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://dqqhbyuyyj1si"]
 
 [ext_resource type="Script" uid="uid://cbnstocroycpv" path="res://scenes/death_screen/death_screen.gd" id="1_w8h0d"]
-[ext_resource type="PackedScene" uid="uid://bg8ahamfcwj3i" path="res://nodes/background.tscn" id="2_eu6q6"]
 [ext_resource type="Resource" uid="uid://dhwjuh6b6sghl" path="res://content/albums/eternity.tres" id="2_ulujf"]
 [ext_resource type="PackedScene" uid="uid://bi1p1sul5tdrj" path="res://nodes/player/player_camera.tscn" id="3_cnyqg"]
 [ext_resource type="PackedScene" uid="uid://dq8m1un7enhgx" path="res://ui/nodes/panel.tscn" id="3_ulujf"]
@@ -74,8 +73,6 @@ layout_mode = 2
 text = "Back to Duck Menu"
 
 [node name="Environment" type="Node2D" parent="." unique_id=1117941202]
-
-[node name="Background" parent="Environment" unique_id=67694840 instance=ExtResource("2_eu6q6")]
 
 [node name="PlayerCamera" parent="Environment" unique_id=2141972906 instance=ExtResource("3_cnyqg")]
 

@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://tktlpcpk1j2k"]
 
-[ext_resource type="PackedScene" uid="uid://bg8ahamfcwj3i" path="res://nodes/background.tscn" id="1_qrg0e"]
 [ext_resource type="PackedScene" uid="uid://pgiicv4uwcag" path="res://nodes/player/player_character.tscn" id="2_68qd2"]
 [ext_resource type="PackedScene" uid="uid://cgcl07qiwawui" path="res://nodes/arrow_spawner/arrow_spawner.tscn" id="3_xybn2"]
 [ext_resource type="Resource" uid="uid://dute5ilp142a5" path="res://content/arrow_timeline_registry.tres" id="4_o3b4p"]
@@ -14,8 +13,6 @@
 size = Vector2(1152, 648)
 
 [node name="Environment" type="Node2D" unique_id=1627808306]
-
-[node name="Background" parent="." unique_id=7560942 instance=ExtResource("1_qrg0e")]
 
 [node name="PlayerCharacter" parent="." unique_id=1176646513 instance=ExtResource("2_68qd2")]
 

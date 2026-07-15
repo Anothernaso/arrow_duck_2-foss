@@ -5,6 +5,6 @@
 [resource]
 script = ExtResource("1_tt1ns")
 z_index = -5
-speed = 100.0
+speed = -100.0
 texture_path = "uid://igwlmgv76hpq"
 metadata/_custom_type_script = "uid://jrkqs51vogao"
