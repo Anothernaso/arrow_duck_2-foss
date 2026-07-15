@@ -12,7 +12,7 @@ enum ForcePlayMode {
 @export var _fade_time: float
 
 @onready var _audio_player: AudioStreamPlayer = $AudioStreamPlayer
-var _current_album: MusicAlbum
+var _current_album: AD_MusicAlbum
 
 var _fading_out: bool
 
@@ -69,7 +69,7 @@ func play_stream(stream: AudioStream) -> void:
 	_transition_to(stream)
 	
 
-func set_album(album: MusicAlbum, force_play_mode: ForcePlayMode = ForcePlayMode.Never) -> void:
+func set_album(album: AD_MusicAlbum, force_play_mode: ForcePlayMode = ForcePlayMode.Never) -> void:
 	var last_album := _current_album
 	_current_album = album
 	

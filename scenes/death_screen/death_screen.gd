@@ -2,7 +2,7 @@ extends Node
 
 class_name DeathScreen
 
-@export var album: MusicAlbum
+@export var album: AD_MusicAlbum
 
 @onready var score_label: Label = $UI/Control/CenterContainer/Panel/VSplitContainer/VBoxContainer/ScoreLabel
 @onready var highscore_label: Label = $UI/Control/CenterContainer/Panel/VSplitContainer/VBoxContainer/HighscoreLabel
