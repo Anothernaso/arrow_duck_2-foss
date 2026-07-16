@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="AD_Setting" format=3 uid="uid://dcv2n4ovs0ic"]
+
+[ext_resource type="Script" uid="uid://litytbojtxpy" path="res://globals/setting_manager/setting/setting.gd" id="1_k15cp"]
+
+[resource]
+script = ExtResource("1_k15cp")
+name = &"sfx_volume_db"
+display_name = "Sfx Volume (dB)"
+default_value = 0.0
+metadata/_custom_type_script = "uid://litytbojtxpy"

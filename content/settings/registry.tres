@@ -1,9 +1,11 @@
 [gd_resource type="Resource" script_class="AD_SettingRegistry" format=3 uid="uid://736gthtfvc7v"]
 
 [ext_resource type="Script" uid="uid://b8gf7w1suy3pc" path="res://globals/setting_manager/setting/setting_category.gd" id="1_uc1i5"]
+[ext_resource type="Resource" uid="uid://rjx1yys4gbm8" path="res://content/settings/audio/audio.tres" id="2_5qhey"]
 [ext_resource type="Script" uid="uid://blcxxbpggtcmk" path="res://globals/setting_manager/setting/setting_registry.gd" id="2_f8ibx"]
 [ext_resource type="Script" uid="uid://litytbojtxpy" path="res://globals/setting_manager/setting/setting.gd" id="3_5qhey"]
 
 [resource]
 script = ExtResource("2_f8ibx")
+categories = Array[ExtResource("1_uc1i5")]([ExtResource("2_5qhey")])
 metadata/_custom_type_script = "uid://blcxxbpggtcmk"

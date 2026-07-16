@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="AD_AudioEffect" format=3 uid="uid://bm0n7sx82ur12"]
+
+[ext_resource type="Script" uid="uid://cfvdu6ji53ox3" path="res://scripts/sfx_player/audio_effect.gd" id="1_nly46"]
+[ext_resource type="AudioStream" uid="uid://cl10ypfxfehmx" path="res://audio/effects/duck_death.ogg" id="2_mp01w"]
+
+[resource]
+script = ExtResource("1_nly46")
+variants = Array[AudioStream]([ExtResource("2_mp01w")])
+metadata/_custom_type_script = "uid://cfvdu6ji53ox3"

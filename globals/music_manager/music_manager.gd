@@ -24,9 +24,20 @@ func _transition_to(stream: AudioStream) -> void:
 	var fade_in :=  func() -> void:
 		_audio_player.stream = stream
 		_audio_player.play()
-
+		
+		AD_GlobalSettingManager.open_config()
+		
 		var t := create_tween()
-		t.tween_property(_audio_player, "volume_db", _volume, _fade_time)
+		t.tween_property(
+			_audio_player, "volume_db",
+			_volume + (
+				AD_GlobalSettingManager.get_value(
+					"/audio/music_volume_db"
+					) as float
+				),
+			_fade_time
+			)
+			
 		
 	
 	# Only fade out if a track is already playing
@@ -89,6 +100,6 @@ func set_album(album: AD_MusicAlbum, force_play_mode: ForcePlayMode = ForcePlayM
 func play_random() -> void:
 	if !_current_album: return
 	
-	var stream := AD_ArrayUtils.get_random_element(_current_album.streams) as AudioStream
+	var stream := _current_album.streams.pick_random() as AudioStream
 	play_stream(stream)
 	

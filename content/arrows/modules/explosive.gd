@@ -3,6 +3,8 @@ extends ArrowModule
 @export var shape: Shape2D
 @export var projectile_scene: PackedScene
 
+@export var explosion_sfx: AD_AudioEffect
+
 @onready var collision: CollisionShape2D
 
 func _ready() -> void:
@@ -14,7 +16,11 @@ func _ready() -> void:
 
 func _on_body_entered(body: Node2D) -> void:
 	if !body.is_in_group("player"): return
-		
+	
+	var sfx_player := AD_SfxPlayer.new()
+	sfx_player.effect = explosion_sfx
+	get_tree().root.add_child(sfx_player)
+	
 	var p1 := projectile_scene.instantiate() as ProjectileBase
 	var p2 := projectile_scene.instantiate() as ProjectileBase
 	var p3 := projectile_scene.instantiate() as ProjectileBase

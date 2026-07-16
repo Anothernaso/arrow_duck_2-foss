@@ -22,10 +22,7 @@ func _on_tick(_delta: float) -> void:
 	
 	if !success || cloud_registry.cloud_scenes.is_empty(): return
 	
-	var cloud_scene := AD_ArrayUtils \
-		.get_random_element(
-			cloud_registry.cloud_scenes
-		) as PackedScene
+	var cloud_scene: PackedScene = cloud_registry.cloud_scenes.pick_random()
 	
 	var cloud := cloud_scene.instantiate() as CloudBase
 	var spawn_position := AD_Vector2Utils.randv2_range(

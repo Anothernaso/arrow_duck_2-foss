@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://c7j60e7uncupm" path="res://scripts/arrow/arrow_base.gd" id="1_bme1q"]
 [ext_resource type="PackedScene" uid="uid://8wtvmcs0wvlo" path="res://content/arrows/modules/explosive.tscn" id="2_5ln7d"]
 [ext_resource type="PackedScene" uid="uid://b2ruemued5wyd" path="res://content/arrows/projectiles/shrapnel.tscn" id="3_qlrr0"]
+[ext_resource type="Resource" uid="uid://expd2x73v0d" path="res://content/audio_effects/explosion.tres" id="4_d2u70"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bme1q"]
 
@@ -38,4 +39,5 @@ metadata/_custom_type_script = "uid://c7j60e7uncupm"
 [node name="Explosive" parent="." unique_id=1114029869 node_paths=PackedStringArray("arrow_root") instance=ExtResource("2_5ln7d")]
 shape = SubResource("CircleShape2D_5ln7d")
 projectile_scene = ExtResource("3_qlrr0")
+explosion_sfx = ExtResource("4_d2u70")
 arrow_root = NodePath("..")

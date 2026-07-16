@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="AD_AudioEffect" format=3 uid="uid://expd2x73v0d"]
+
+[ext_resource type="Script" uid="uid://cfvdu6ji53ox3" path="res://scripts/sfx_player/audio_effect.gd" id="1_pgl3i"]
+[ext_resource type="AudioStream" uid="uid://ev6cl1k573m6" path="res://audio/effects/explosion/explosion_1.ogg" id="2_mts6r"]
+[ext_resource type="AudioStream" uid="uid://bs00sh3ldy6cc" path="res://audio/effects/explosion/explosion_2.ogg" id="3_krm1y"]
+[ext_resource type="AudioStream" uid="uid://ci8ftnyy20an2" path="res://audio/effects/explosion/explosion_3.ogg" id="4_457hf"]
+[ext_resource type="AudioStream" uid="uid://n85fuly0gc4e" path="res://audio/effects/explosion/explosion_4.ogg" id="5_0lxit"]
+[ext_resource type="AudioStream" uid="uid://cdie1kv64dq71" path="res://audio/effects/explosion/explosion_5.ogg" id="6_qdnc2"]
+
+[resource]
+script = ExtResource("1_pgl3i")
+volume_db = -20.0
+variants = Array[AudioStream]([ExtResource("2_mts6r"), ExtResource("3_krm1y"), ExtResource("4_457hf"), ExtResource("5_0lxit"), ExtResource("6_qdnc2")])
+metadata/_custom_type_script = "uid://cfvdu6ji53ox3"

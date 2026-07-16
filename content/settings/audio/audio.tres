@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="AD_SettingCategory" format=3 uid="uid://rjx1yys4gbm8"]
+
+[ext_resource type="Script" uid="uid://b8gf7w1suy3pc" path="res://globals/setting_manager/setting/setting_category.gd" id="1_mmjsq"]
+[ext_resource type="Script" uid="uid://litytbojtxpy" path="res://globals/setting_manager/setting/setting.gd" id="2_p3tjp"]
+[ext_resource type="Resource" uid="uid://bbdlnwncpoit3" path="res://content/settings/audio/music_volume.tres" id="3_jdbqn"]
+[ext_resource type="Resource" uid="uid://dcv2n4ovs0ic" path="res://content/settings/audio/sfx_volume_db.tres" id="4_b17mp"]
+
+[resource]
+script = ExtResource("1_mmjsq")
+name = &"audio"
+display_name = "Audio"
+settings = Array[ExtResource("2_p3tjp")]([ExtResource("3_jdbqn"), ExtResource("4_b17mp")])
+metadata/_custom_type_script = "uid://b8gf7w1suy3pc"
