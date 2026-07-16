@@ -15,7 +15,7 @@ func _ready() -> void:
 	
 
 ## Opens the config file so that changes can be made.
-func open() -> void:
+func open_config() -> void:
 	if _config_file:
 		return
 		
@@ -28,7 +28,7 @@ func open() -> void:
 	
 
 ## Closes the config file, discarding any unsaved changes.
-func discard() -> void:
+func discard_changes() -> void:
 	if !_config_file:
 		return
 		
@@ -37,7 +37,7 @@ func discard() -> void:
 	
 
 ## Saves the config file, applies all changes and closes the config file.
-func apply() -> void:
+func apply_settings() -> void:
 	if !_config_file:
 		return
 		
@@ -51,18 +51,20 @@ func apply() -> void:
 			return
 			
 		
+		var value: Variant = _config_file.get_value(_SECTION, name_, rt_setting.setting.default_value)
+		
 		for listener in rt_setting.listeners:
-			listener.call(_config_file.get_value(_SECTION, name_))
+			listener.call(value)
 			
 		
 	
 	_config_file = null
 	
 
-## Reads a setting,
+## Reads the value of a setting,
 ## returning null if the config file is not open,
 ## or if no setting with the given name exists.
-func read(name_p: StringName) -> Variant:
+func get_value(name_p: StringName) -> Variant:
 	if !_config_file:
 		return null
 		
@@ -76,8 +78,8 @@ func read(name_p: StringName) -> Variant:
 	return _config_file.get_value(_SECTION, name_p, rt_setting.setting.default_value)
 	
 
-## Resets the setting with the given name
-func reset(name_p: StringName) -> void:
+## Resets the value of the setting with the given name.
+func reset_value(name_p: StringName) -> void:
 	if !_config_file:
 		return
 		
@@ -95,6 +97,35 @@ func reset(name_p: StringName) -> void:
 	rt_setting.has_changed = true
 	
 
-func write(name_p: StringName, value: Variant) -> void:
-	pass # TODO: Implement
+## Checks if the setting with the given name has a value.
+func has_value(name_p: StringName) -> bool:
+	if !_config_file:
+		return false
+		
+	
+	if !_rt_settings.has(name_p):
+		return false
+		
+	
+	return _config_file.has_section_key(_SECTION, name_p) 
+	
+
+## Writes the value of the setting with the given name.
+func set_value(name_p: StringName, value: Variant) -> void:
+	if !_config_file:
+		return
+		
+	
+	if !_rt_settings.has(name_p):
+		return
+		
+	
+	var rt_setting := _rt_settings[name_p]
+	
+	if typeof(value) != typeof(rt_setting.setting.default_value):
+		return
+		
+	
+	_config_file.set_value(_SECTION, name_p, value)
+	rt_setting.has_changed = true
 	
