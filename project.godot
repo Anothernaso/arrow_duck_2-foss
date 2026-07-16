@@ -26,6 +26,7 @@ driver/driver="PipeWire"
 
 [autoload]
 
+AD_GlobalSettingManager="*uid://bj61lft1h8q4i"
 AD_GlobalGameStateManager="*uid://ckum100t7knj4"
 AD_GlobalMusicManager="*uid://bd1elsjt3hwrq"
 AD_GlobalBackgroundManager="*uid://d3f75lbdadrmv"
