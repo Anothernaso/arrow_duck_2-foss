@@ -129,3 +129,26 @@ func set_value(name_p: StringName, value: Variant) -> void:
 	_config_file.set_value(_SECTION, name_p, value)
 	rt_setting.has_changed = true
 	
+
+func add_listener(name_p: StringName, listener: Callable) -> void:
+	if !_rt_settings.has(name_p):
+		return
+	
+	var rt_setting := _rt_settings[name_p]
+	
+	rt_setting.listeners.append(listener)
+	
+
+func remove_listener(name_p: StringName, listener: Callable) -> void:
+	if !_rt_settings.has(name_p):
+		return
+	
+	var rt_setting := _rt_settings[name_p]
+	
+	var index := rt_setting.listeners.find(listener)
+	if index == -1:
+		return
+		
+	
+	rt_setting.listeners.remove_at(index)
+	

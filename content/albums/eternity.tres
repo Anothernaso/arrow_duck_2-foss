@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="MusicAlbum" format=3 uid="uid://dhwjuh6b6sghl"]
+[gd_resource type="Resource" script_class="AD_MusicAlbum" format=3 uid="uid://dhwjuh6b6sghl"]
 
 [ext_resource type="Script" uid="uid://4it7qa7dq5n2" path="res://globals/music_manager/music_album.gd" id="1_shj0g"]
 [ext_resource type="AudioStream" uid="uid://brt0klpxbyywu" path="res://audio/music/eternity/DavidKBD - Eternity Pack - 01 - The desolation of a civilization - oneshoot.ogg" id="2_hbju1"]

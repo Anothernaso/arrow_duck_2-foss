@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="MusicAlbum" format=3 uid="uid://c6w3eypo7py0m"]
+[gd_resource type="Resource" script_class="AD_MusicAlbum" format=3 uid="uid://c6w3eypo7py0m"]
 
 [ext_resource type="Script" uid="uid://4it7qa7dq5n2" path="res://globals/music_manager/music_album.gd" id="1_vtq7o"]
 [ext_resource type="AudioStream" uid="uid://dxn4snxl7i05m" path="res://audio/music/purgatory/vol1/01 - DavidKBD - Purgatory Pack - Purgatory.ogg" id="2_0cdho"]
