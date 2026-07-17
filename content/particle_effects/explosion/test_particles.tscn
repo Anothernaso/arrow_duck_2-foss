@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bayoy3c348255"]
+
+[ext_resource type="Material" uid="uid://dhptfbevcui2l" path="res://content/particle_effects/explosion/explosion_material.tres" id="1_hf7xj"]
+
+[node name="TestParticles" type="GPUParticles2D" unique_id=1430841446]
+amount = 32
+lifetime = 4.0
+explosiveness = 0.95
+trail_enabled = true
+process_material = ExtResource("1_hf7xj")

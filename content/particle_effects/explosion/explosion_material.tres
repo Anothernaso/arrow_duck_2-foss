@@ -1,0 +1,14 @@
+[gd_resource type="ParticleProcessMaterial" format=3 uid="uid://dhptfbevcui2l"]
+
+[resource]
+lifetime_randomness = 0.4
+particle_flag_disable_z = true
+inherit_velocity_ratio = 0.5
+spread = 180.0
+initial_velocity_min = 120.0
+initial_velocity_max = 240.0
+gravity = Vector3(0, 98, 0)
+scale_min = 4.0
+scale_max = 10.0
+hue_variation_min = -1.0
+hue_variation_max = 0.99999994

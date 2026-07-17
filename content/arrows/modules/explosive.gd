@@ -4,6 +4,7 @@ extends ArrowModule
 @export var projectile_scene: PackedScene
 
 @export var explosion_sfx: AD_AudioEffect
+@export var explosion_vfx: AD_ParticleEffect
 
 @onready var collision: CollisionShape2D
 
@@ -17,9 +18,18 @@ func _ready() -> void:
 func _on_body_entered(body: Node2D) -> void:
 	if !body.is_in_group("player"): return
 	
-	var sfx_player := AD_SfxPlayer.new()
-	sfx_player.effect = explosion_sfx
-	get_tree().root.add_child(sfx_player)
+	if explosion_sfx:
+		var sfx_player := AD_SfxPlayer.new()
+		sfx_player.effect = explosion_sfx
+		get_tree().root.add_child(sfx_player)
+		
+	
+	if explosion_vfx:
+		var vfx_player := AD_VfxPlayer.new()
+		vfx_player.effect = explosion_vfx
+		vfx_player.global_position = arrow_root.global_position
+		get_tree().root.add_child(vfx_player)
+		
 	
 	var p1 := projectile_scene.instantiate() as ProjectileBase
 	var p2 := projectile_scene.instantiate() as ProjectileBase
