@@ -1,8 +1,8 @@
 [gd_resource type="Resource" script_class="ArrowTimeline" format=3 uid="uid://bcix8r3d3shee"]
 
-[ext_resource type="Script" uid="uid://cmdhhiu7aw3ny" path="res://scripts/arrow/arrow_sequence.gd" id="1_bn7jg"]
+[ext_resource type="Script" uid="uid://cmdhhiu7aw3ny" path="res://scripts/timeline/arrow_sequence.gd" id="1_bn7jg"]
 [ext_resource type="PackedScene" uid="uid://04atsbtlul2t" path="res://content/arrows/arrow_fast.tscn" id="2_w663g"]
-[ext_resource type="Script" uid="uid://ysy7kt8civ23" path="res://scripts/arrow/arrow_timeline.gd" id="3_6ve67"]
+[ext_resource type="Script" uid="uid://ysy7kt8civ23" path="res://scripts/timeline/arrow_timeline.gd" id="3_6ve67"]
 [ext_resource type="PackedScene" uid="uid://mywnkf0af500" path="res://content/arrows/arrow_basic.tscn" id="3_dvq8x"]
 [ext_resource type="PackedScene" uid="uid://bax2g7hqv7ce4" path="res://content/arrows/arrow_fire.tscn" id="3_w663g"]
 [ext_resource type="PackedScene" uid="uid://duwgn76dg4myj" path="res://content/arrows/arrow_explosive.tscn" id="3_xeki2"]

@@ -28,7 +28,7 @@ func _on_body_entered(body: Node2D) -> void:
 		var vfx_player := AD_VfxPlayer.new()
 		vfx_player.effect = explosion_vfx
 		vfx_player.global_position = arrow_root.global_position
-		get_tree().root.add_child(vfx_player)
+		AD_Environment.singleton.add_child(vfx_player)
 		
 	
 	var p1 := projectile_scene.instantiate() as AD_ProjectileBase
@@ -46,10 +46,10 @@ func _on_body_entered(body: Node2D) -> void:
 	p3.direction = Vector2(0, 1)
 	p4.direction = Vector2(1, 0)
 	
-	AD_ArrowSpawner.singleton.arrow_holder.add_child.call_deferred(p1)
-	AD_ArrowSpawner.singleton.arrow_holder.add_child.call_deferred(p2)
-	AD_ArrowSpawner.singleton.arrow_holder.add_child.call_deferred(p3)
-	AD_ArrowSpawner.singleton.arrow_holder.add_child.call_deferred(p4)
+	AD_ArrowSpawner.singleton.arrow_holder.add_child(p1)
+	AD_ArrowSpawner.singleton.arrow_holder.add_child(p2)
+	AD_ArrowSpawner.singleton.arrow_holder.add_child(p3)
+	AD_ArrowSpawner.singleton.arrow_holder.add_child(p4)
 	
 	arrow_root.queue_free()
 	

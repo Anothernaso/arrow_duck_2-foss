@@ -1,12 +1,12 @@
 [gd_resource type="Resource" script_class="ArrowTimeline" format=3 uid="uid://lfakvi3u4xmp"]
 
-[ext_resource type="Script" uid="uid://cmdhhiu7aw3ny" path="res://scripts/arrow/arrow_sequence.gd" id="1_seyqg"]
+[ext_resource type="Script" uid="uid://cmdhhiu7aw3ny" path="res://scripts/timeline/arrow_sequence.gd" id="1_seyqg"]
 [ext_resource type="PackedScene" uid="uid://mywnkf0af500" path="res://content/arrows/arrow_basic.tscn" id="2_7nxa2"]
 [ext_resource type="PackedScene" uid="uid://bax2g7hqv7ce4" path="res://content/arrows/arrow_fire.tscn" id="3_7tqml"]
 [ext_resource type="PackedScene" uid="uid://duc2gqn6a5yea" path="res://content/arrows/arrow_super_speed.tscn" id="4_bgxq3"]
 [ext_resource type="PackedScene" uid="uid://04atsbtlul2t" path="res://content/arrows/arrow_fast.tscn" id="5_exmnu"]
 [ext_resource type="PackedScene" uid="uid://dn3we1fu4vmju" path="res://content/arrows/arrow_medium.tscn" id="6_arwvj"]
-[ext_resource type="Script" uid="uid://ysy7kt8civ23" path="res://scripts/arrow/arrow_timeline.gd" id="7_hgr0h"]
+[ext_resource type="Script" uid="uid://ysy7kt8civ23" path="res://scripts/timeline/arrow_timeline.gd" id="7_hgr0h"]
 
 [sub_resource type="Resource" id="Resource_tpgpo"]
 script = ExtResource("1_seyqg")

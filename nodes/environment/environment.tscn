@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://tktlpcpk1j2k"]
+
+[ext_resource type="Script" uid="uid://dt3x0tswohdgm" path="res://nodes/environment/environment.gd" id="1_jbaq0"]
+[ext_resource type="PackedScene" uid="uid://pgiicv4uwcag" path="res://nodes/player/player_character.tscn" id="2_m4svs"]
+[ext_resource type="PackedScene" uid="uid://cgcl07qiwawui" path="res://nodes/arrow_spawner/arrow_spawner.tscn" id="3_e7uaw"]
+[ext_resource type="Resource" uid="uid://dute5ilp142a5" path="res://content/arrow_timeline_registry.tres" id="4_ox8ks"]
+[ext_resource type="PackedScene" uid="uid://cede15oabb50b" path="res://nodes/cloud_spawner/cloud_spawner.tscn" id="5_bjufj"]
+[ext_resource type="Resource" uid="uid://8thpwy4kgorg" path="res://content/cloud_registry.tres" id="6_o5qng"]
+[ext_resource type="PackedScene" uid="uid://dtbxlownlxlhx" path="res://nodes/bounds/bounds.tscn" id="7_jbaq0"]
+[ext_resource type="PackedScene" uid="uid://ccsjf3h4r18cp" path="res://nodes/screen_area/screen_area.tscn" id="8_kytdd"]
+[ext_resource type="PackedScene" uid="uid://bi1p1sul5tdrj" path="res://nodes/player/player_camera.tscn" id="9_j3xvh"]
+
+[node name="Environment" type="Node2D" unique_id=1627808306]
+script = ExtResource("1_jbaq0")
+
+[node name="PlayerCharacter" parent="." unique_id=1176646513 instance=ExtResource("2_m4svs")]
+
+[node name="ArrowSpawner" parent="." unique_id=276560459 node_paths=PackedStringArray("min_spawn_point_node", "max_spawn_point_node") instance=ExtResource("3_e7uaw")]
+min_spawn_point_node = NodePath("SpawnMin")
+max_spawn_point_node = NodePath("SpawnMax")
+timeline_registry = ExtResource("4_ox8ks")
+
+[node name="SpawnMin" type="Node2D" parent="ArrowSpawner" unique_id=395373358]
+position = Vector2(700, -327)
+
+[node name="SpawnMax" type="Node2D" parent="ArrowSpawner" unique_id=727008278]
+position = Vector2(700, 329)
+
+[node name="CloudSpawner" parent="." unique_id=525504888 node_paths=PackedStringArray("min_spawn_point", "max_spawn_point") instance=ExtResource("5_bjufj")]
+cloud_registry = ExtResource("6_o5qng")
+min_spawn_point = NodePath("SpawnMin")
+max_spawn_point = NodePath("SpawnMax")
+
+[node name="SpawnMin" type="Node2D" parent="CloudSpawner" unique_id=2053402638]
+position = Vector2(1482, -327)
+
+[node name="SpawnMin2" type="Node2D" parent="CloudSpawner" unique_id=973463052]
+position = Vector2(-1332, 0)
+
+[node name="SpawnMax" type="Node2D" parent="CloudSpawner" unique_id=2061323418]
+position = Vector2(1482, 329)
+
+[node name="Bounds" parent="." unique_id=1051381269 instance=ExtResource("7_jbaq0")]
+
+[node name="ScreenArea" parent="." unique_id=981812311 instance=ExtResource("8_kytdd")]
+
+[node name="PlayerCamera" parent="." unique_id=332213508 instance=ExtResource("9_j3xvh")]

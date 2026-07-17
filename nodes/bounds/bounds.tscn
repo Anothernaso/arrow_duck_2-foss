@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dtbxlownlxlhx"]
+
+[ext_resource type="Script" uid="uid://biptmmbl3hywo" path="res://nodes/bounds/bounds.gd" id="1_46qyk"]
+
+[node name="Bounds" type="StaticBody2D" unique_id=1051381269]
+script = ExtResource("1_46qyk")

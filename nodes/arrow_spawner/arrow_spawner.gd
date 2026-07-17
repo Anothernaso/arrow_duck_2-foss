@@ -76,7 +76,7 @@ func spawn_random() -> void:
 	
 	for arrow in current_timeline.registry:
 		
-		# make sure the arrow only spawns if we are in the arrow's time zone
+		# Make sure the arrow only spawns if we are in the arrow's time zone
 		if arrow.min_survival_time > current_timeline_position or arrow.max_survival_time < current_timeline_position:
 			continue
 		
