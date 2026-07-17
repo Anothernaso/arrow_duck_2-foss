@@ -1,4 +1,4 @@
-class_name ProjectileBase
+class_name AD_ProjectileBase
 extends CharacterBody2D
 
 @export var speed: float = 300

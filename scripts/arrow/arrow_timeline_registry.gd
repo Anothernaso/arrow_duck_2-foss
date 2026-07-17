@@ -1,5 +1,5 @@
 extends Resource
 
-class_name ArrowTimelineRegistry
+class_name AD_ArrowTimelineRegistry
 
-@export var timelines: Array[ArrowTimeline] = []
+@export var timelines: Array[AD_ArrowTimeline] = []

@@ -9,23 +9,15 @@ static var singleton: AD_ArrowSpawner
 static var min_spawn_point: Vector2
 static var max_spawn_point: Vector2
 
-## I don't even know what this does.
-## It doesn't seem to have any usages.
-## I probably stopped using it when I added the ScoreCounter back in 2024.
-## 
-## I should search through the codebase using `ripgrep` some day.
-##
-## - Anatnaso
-##
-@export var spawn_delay: float = 3
-@export var timeline_registry: ArrowTimelineRegistry
+
+@export var timeline_registry: AD_ArrowTimelineRegistry
 
 @onready var arrow_holder: Node2D = $ArrowHolder
 
 var current_timeline_position: float = 0
 var total_timeline_position: float = 0
 
-static var current_timeline: ArrowTimeline = null
+static var current_timeline: AD_ArrowTimeline = null
 
 func _ready() -> void:
 	singleton = self
@@ -63,7 +55,7 @@ func time_tick(delta: float) -> void:
 ## if so, it sets the next timeline as the current one.
 ## This functions should run every time-tick.
 func update_timeline() -> void:
-	for timeline: ArrowTimeline in timeline_registry.timelines:
+	for timeline in timeline_registry.timelines:
 		if roundi(current_timeline_position) != roundi(timeline.start_time): continue
 		if timeline_registry.timelines.find(timeline) != timeline_registry.timelines.find(current_timeline) + 1: continue
 		
@@ -82,7 +74,7 @@ func spawn_random() -> void:
 	
 	if !current_timeline: return
 	
-	for arrow: ArrowSequence in current_timeline.registry:
+	for arrow in current_timeline.registry:
 		
 		# make sure the arrow only spawns if we are in the arrow's time zone
 		if arrow.min_survival_time > current_timeline_position or arrow.max_survival_time < current_timeline_position:

@@ -1,4 +1,4 @@
-extends ArrowModule
+extends AD_ArrowModule
 
 @export var shape: Shape2D
 @export var projectile_scene: PackedScene
@@ -31,10 +31,10 @@ func _on_body_entered(body: Node2D) -> void:
 		get_tree().root.add_child(vfx_player)
 		
 	
-	var p1 := projectile_scene.instantiate() as ProjectileBase
-	var p2 := projectile_scene.instantiate() as ProjectileBase
-	var p3 := projectile_scene.instantiate() as ProjectileBase
-	var p4 := projectile_scene.instantiate() as ProjectileBase
+	var p1 := projectile_scene.instantiate() as AD_ProjectileBase
+	var p2 := projectile_scene.instantiate() as AD_ProjectileBase
+	var p3 := projectile_scene.instantiate() as AD_ProjectileBase
+	var p4 := projectile_scene.instantiate() as AD_ProjectileBase
 	
 	p1.global_position = arrow_root.global_position
 	p2.global_position = arrow_root.global_position

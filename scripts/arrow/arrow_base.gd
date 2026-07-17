@@ -1,4 +1,4 @@
-class_name ArrowBase
+class_name AD_ArrowBase
 extends CharacterBody2D
 
 @export var speed: float = 300

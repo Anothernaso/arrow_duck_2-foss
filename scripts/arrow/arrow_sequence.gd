@@ -1,6 +1,6 @@
 extends Resource
 
-class_name ArrowSequence
+class_name AD_ArrowSequence
 
 ## The delay from the beginning of the timeline to when
 ## the arrows should start spawning.
