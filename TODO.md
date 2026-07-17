@@ -6,5 +6,8 @@
    - ~~Rename `MusicAlbum` class to `AD_MusicAlbum`~~
    - ~~Improve error handling/debugging for `AD_SettingManager`~~
    - Improve explosive arrow particles
+   - Replace `duck.png` and related art with art that Anatnaso rightfully "owns"
+   - Relicense source code under `GPL-3.0-or-later`
+   - Relicense art assets under `CC BY-SA 4.0`
    - Rework `ArrowSpawner` and entire timeline system to allow for new gameplay
    - Add settings menu
