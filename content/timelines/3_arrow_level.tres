@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="ArrowTimeline" format=3 uid="uid://cwftoumlp0nbd"]
+[gd_resource type="Resource" script_class="AD_ArrowTimeline" format=3 uid="uid://cwftoumlp0nbd"]
 
 [ext_resource type="Script" uid="uid://cmdhhiu7aw3ny" path="res://scripts/timeline/arrow_sequence.gd" id="1_eavcx"]
 [ext_resource type="PackedScene" uid="uid://bax2g7hqv7ce4" path="res://content/arrows/arrow_fire.tscn" id="2_2qjvi"]

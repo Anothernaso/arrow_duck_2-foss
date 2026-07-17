@@ -18,6 +18,8 @@ func set_background(background: AD_Background, force: bool = false) -> void:
 		return
 		
 	
+	print("Changing background to: " + background.resource_path)
+	
 	_current_background = background
 	
 	if _current_background_node:

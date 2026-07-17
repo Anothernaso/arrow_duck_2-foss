@@ -14,11 +14,12 @@ config/name="Arrow Duck 2"
 config/description="A game about a duck ducking from arrows."
 config/version="3.4.0"
 run/main_scene="uid://lgpl40m4r1b2"
+config/project_settings_override="user://project_settings.cfg"
 config/features=PackedStringArray("4.7", "Forward Plus")
 boot_splash/bg_color=Color(0.246792, 0.734962, 1, 1)
 boot_splash/stretch_mode=4
 boot_splash/image="uid://dsyqd0hyae2ea"
-config/icon="uid://ghpw681ojcra"
+config/icon="uid://mialfbut6b7u"
 
 [audio]
 
@@ -47,7 +48,7 @@ display_server/driver.linuxbsd="wayland"
 
 [dotnet]
 
-project/assembly_name="Arrow Duck 2"
+project/assembly_name="ArrowDuck2"
 
 [editor_plugins]
 

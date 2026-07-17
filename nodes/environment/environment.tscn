@@ -8,7 +8,7 @@
 [ext_resource type="Resource" uid="uid://8thpwy4kgorg" path="res://content/cloud_registry.tres" id="6_o5qng"]
 [ext_resource type="PackedScene" uid="uid://dtbxlownlxlhx" path="res://nodes/bounds/bounds.tscn" id="7_jbaq0"]
 [ext_resource type="PackedScene" uid="uid://ccsjf3h4r18cp" path="res://nodes/screen_area/screen_area.tscn" id="8_kytdd"]
-[ext_resource type="PackedScene" uid="uid://bi1p1sul5tdrj" path="res://nodes/player/player_camera.tscn" id="9_j3xvh"]
+[ext_resource type="PackedScene" uid="uid://bi1p1sul5tdrj" path="res://nodes/main_camera.tscn" id="9_j3xvh"]
 
 [node name="Environment" type="Node2D" unique_id=1627808306]
 script = ExtResource("1_jbaq0")
@@ -44,4 +44,4 @@ position = Vector2(1482, 329)
 
 [node name="ScreenArea" parent="." unique_id=981812311 instance=ExtResource("8_kytdd")]
 
-[node name="PlayerCamera" parent="." unique_id=332213508 instance=ExtResource("9_j3xvh")]
+[node name="MainCamera" parent="." unique_id=332213508 instance=ExtResource("9_j3xvh")]

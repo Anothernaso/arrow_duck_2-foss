@@ -1,4 +1,4 @@
 [gd_scene format=3 uid="uid://bi1p1sul5tdrj"]
 
-[node name="PlayerCamera" type="Camera2D" unique_id=1179113042]
+[node name="MainCamera" type="Camera2D" unique_id=1179113042]
 process_callback = 0

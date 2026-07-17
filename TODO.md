@@ -5,9 +5,10 @@
    - ~~Add UI manager that toggles between pause menu and HUD~~
    - ~~Rename `MusicAlbum` class to `AD_MusicAlbum`~~
    - ~~Improve error handling/debugging for `AD_SettingManager`~~
+   - ~~Replace `duck.png` with art that Anatnaso rightfully owns~~
+   - Replace `cover.png` with art that Anatnaso rightfully owns
    - Update `AD_ArrowSpawner` to dynamically adjust the spawn position of arrows based on the viewport size
    - Improve explosive arrow particles
-   - Replace `duck.png` and related art with art that Anatnaso rightfully "owns"
    - Relicense source code under `GPL-3.0-or-later`
    - Relicense art assets under `CC BY-SA 4.0`
    - Rework `AD_ArrowSpawner` and entire timeline system to allow for new gameplay

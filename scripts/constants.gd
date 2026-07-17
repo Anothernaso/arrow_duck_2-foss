@@ -4,7 +4,7 @@ class_name AD_Constants
 const PERSISTENT_DIR_PATH: String = "user://persistent/"
 
 # File Paths
-const SETTINGS_FILE_PATH: String = "user://settings.cfg"
+const SETTINGS_FILE_PATH: String = "user://user_settings.cfg"
 
 # File Names
 const CURRENT_TIMELINE_FILE_NAME: String = "current_timeline.tres"
