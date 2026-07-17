@@ -33,7 +33,7 @@ func _transition_to(stream: AudioStream) -> void:
 			_volume + (
 				AD_GlobalSettingManager.get_value(
 					"/audio/music_volume_db"
-					) as float
+					).value as float
 				),
 			_fade_time
 			)

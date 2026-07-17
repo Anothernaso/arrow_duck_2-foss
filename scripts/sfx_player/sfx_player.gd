@@ -9,10 +9,11 @@ func _ready() -> void:
 	stream = effect.variants.pick_random()
 	
 	AD_GlobalSettingManager.open_config()
-	volume_db = effect.volume_db + (AD_GlobalSettingManager.get_value("/audio/sfx_volume_db") as float)
+	volume_db = effect.volume_db + (AD_GlobalSettingManager.get_value("/audio/sfx_volume_db").value as float)
 	
 	play()
 	
 
 func _on_finished() -> void:
 	queue_free()
+	
