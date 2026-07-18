@@ -5,5 +5,5 @@
 [resource]
 script = ExtResource("1_xjy8y")
 project_name = "arrow_duck_2"
-include_files = Array[String](["res://README.txt", "res://LICENSE.txt"])
+include_files = Array[String](["res://README.md", "res://LICENSE.md", "res://ATTRIBUTIONS.md", "res://LICENSE-GPL-3.0-or-later.md", "res://LICENSE-CC-BY-4.0.txt", "res://LICENSE-CC0-1.0.txt"])
 metadata/_custom_type_script = "uid://bxh6285cxtb1"
