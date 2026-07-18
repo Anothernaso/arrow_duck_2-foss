@@ -6,6 +6,7 @@
   - ~~Rename `MusicAlbum` class to `AD_MusicAlbum`~~
   - ~~Improve error handling/debugging for `AD_SettingManager`~~
   - ~~Replace `duck.png` with art that Anatnaso rightfully owns~~
+  - Add **Godot Engine** to `ATTRIBUTIONS.md` file
   - ~~Update `AD_CloudSpawner` to dynamically adjust the spawn position of arrows based on the viewport size
   - Figure out why clouds get destroyed immediately upon spawning
   - Update `AD_ArrowSpawner` to dynamically adjust the spawn position of arrows based on the viewport size

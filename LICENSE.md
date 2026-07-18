@@ -1,4 +1,4 @@
-Arrow Duck 2 - A game about a duck ducking from free and open-source arrows.
+Arrow Duck 2 - A game about a duck ducking from arrows.
 Copyright (C) 2026  Anatnaso
 
 This program is free software: you can redistribute it and/or modify
