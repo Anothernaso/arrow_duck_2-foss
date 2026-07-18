@@ -1,4 +1,4 @@
-class_name CloudBase
+class_name AD_CloudBase
 extends CharacterBody2D
 
 @export var min_speed: float = 150
@@ -8,6 +8,7 @@ extends CharacterBody2D
 @export var max_scale: float = 0.8
 
 @onready var speed: float
+
 
 func _ready() -> void:
 	add_to_group("cloud")

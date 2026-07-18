@@ -9,6 +9,9 @@ func _on_resume_button_down() -> void:
 func _on_main_menu_button_down() -> void:
 	var game_state_manager: AD_GameStateManager = AD_GlobalGameStateManager
 	
-	# TODO: Make sure this doesn't cause trouble
+	# Update highscore so that `time_survived`
+	# does not persist until next session
+	AD_ScoreManager.update_highscore()
+	
 	game_state_manager.set_state(AD_GameStates.State.MAIN_MENU)
 	

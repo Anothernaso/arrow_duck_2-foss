@@ -1,15 +1,17 @@
 # To do:
-   - ~~Add pause menu~~
-   - ~~Redesign HUD to be more modular~~
-   - ~~Separate score management from HUD by adding dedicated score manager~~
-   - ~~Add UI manager that toggles between pause menu and HUD~~
-   - ~~Rename `MusicAlbum` class to `AD_MusicAlbum`~~
-   - ~~Improve error handling/debugging for `AD_SettingManager`~~
-   - ~~Replace `duck.png` with art that Anatnaso rightfully owns~~
-   - Replace `cover.png` with art that Anatnaso rightfully owns
-   - Update `AD_ArrowSpawner` to dynamically adjust the spawn position of arrows based on the viewport size
-   - Improve explosive arrow particles
-   - Relicense source code under `GPL-3.0-or-later`
-   - Relicense art assets under `CC BY-SA 4.0`
-   - Rework `AD_ArrowSpawner` and entire timeline system to allow for new gameplay
-   - Add settings menu
+  - ~~Add pause menu~~
+  - ~~Redesign HUD to be more modular~~
+  - ~~Separate score management from HUD by adding dedicated score manager~~
+  - ~~Add UI manager that toggles between pause menu and HUD~~
+  - ~~Rename `MusicAlbum` class to `AD_MusicAlbum`~~
+  - ~~Improve error handling/debugging for `AD_SettingManager`~~
+  - ~~Replace `duck.png` with art that Anatnaso rightfully owns~~
+  - ~~Update `AD_CloudSpawner` to dynamically adjust the spawn position of arrows based on the viewport size
+  - Figure out why clouds get destroyed immediately upon spawning
+  - Update `AD_ArrowSpawner` to dynamically adjust the spawn position of arrows based on the viewport size
+  - Replace `cover.png` with art that Anatnaso rightfully owns
+  - Improve explosive arrow particles
+  - Relicense source code under `GPL-3.0-or-later`
+  - Relicense art assets under `CC BY-SA 4.0`
+  - Rework `AD_ArrowSpawner` and entire timeline system to allow for new gameplay
+  - Add settings menu

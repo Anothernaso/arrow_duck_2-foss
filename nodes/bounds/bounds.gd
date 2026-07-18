@@ -12,11 +12,10 @@ func _make_border(normal: Vector2) -> CollisionShape2D:
 	
 
 func _ready() -> void:
-	var vp_width := ProjectSettings.get_setting("display/window/size/viewport_width") as int
-	var vp_height := ProjectSettings.get_setting("display/window/size/viewport_height") as int
+	var vp_size := get_viewport().get_visible_rect().size
 	
-	var width_quarter := float(vp_width) / 4
-	var height_half := float(vp_height) / 2
+	var width_quarter := float(vp_size.x) / 4
+	var height_half := float(vp_size.y) / 2
 	
 	# North border
 	var n := _make_border(Vector2(0, 1))

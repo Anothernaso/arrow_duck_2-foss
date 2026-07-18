@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://cede15oabb50b"]
 
 [ext_resource type="Script" uid="uid://bjphqll35p5s5" path="res://nodes/cloud_spawner/cloud_spawner.gd" id="1_faupb"]
+[ext_resource type="Resource" uid="uid://8thpwy4kgorg" path="res://content/cloud_registry.tres" id="2_auh8d"]
 
 [node name="CloudSpawner" type="Node2D" unique_id=525504888]
 script = ExtResource("1_faupb")
+_cloud_registry = ExtResource("2_auh8d")
 
 [node name="CloudHolder" type="Node2D" parent="." unique_id=2075710240]
